@@ -1,0 +1,196 @@
+Flow report for Lock_Combined
+Mon May 27 21:08:33 2019
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+  8. Flow Messages
+  9. Flow Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Flow Summary                                                                         ;
++------------------------------------+-------------------------------------------------+
+; Flow Status                        ; Successful - Mon May 27 21:08:30 2019           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; Lock_Combined                                   ;
+; Top-level Entity Name              ; Lock_Combined                                   ;
+; Family                             ; Cyclone II                                      ;
+; Device                             ; EP2C5T144C8                                     ;
+; Timing Models                      ; Final                                           ;
+; Total logic elements               ; 519 / 4,608 ( 11 % )                            ;
+;     Total combinational functions  ; 517 / 4,608 ( 11 % )                            ;
+;     Dedicated logic registers      ; 254 / 4,608 ( 6 % )                             ;
+; Total registers                    ; 254                                             ;
+; Total pins                         ; 19 / 89 ( 21 % )                                ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0 / 119,808 ( 0 % )                             ;
+; Embedded Multiplier 9-bit elements ; 0 / 26 ( 0 % )                                  ;
+; Total PLLs                         ; 0 / 2 ( 0 % )                                   ;
++------------------------------------+-------------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 05/27/2019 21:08:20 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; Lock_Combined       ;
++-------------------+---------------------+
+
+
++--------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                               ;
++--------------------------------------------------------------------------------+
+Assignment Name : COMPILER_SIGNATURE_ID
+Value           : 273105148002904.155896250013784
+Default Value   : --
+Entity Name     : --
+Section Id      : --
+
+Assignment Name : MAX_CORE_JUNCTION_TEMP
+Value           : 85
+Default Value   : --
+Entity Name     : --
+Section Id      : --
+
+Assignment Name : MIN_CORE_JUNCTION_TEMP
+Value           : 0
+Default Value   : --
+Entity Name     : --
+Section Id      : --
+
+Assignment Name : PARTITION_COLOR
+Value           : 16764057
+Default Value   : --
+Entity Name     : --
+Section Id      : Top
+
+Assignment Name : PARTITION_FITTER_PRESERVATION_LEVEL
+Value           : PLACEMENT_AND_ROUTING
+Default Value   : --
+Entity Name     : --
+Section Id      : Top
+
+Assignment Name : PARTITION_NETLIST_TYPE
+Value           : SOURCE
+Default Value   : --
+Entity Name     : --
+Section Id      : Top
+
+Assignment Name : PROJECT_OUTPUT_DIRECTORY
+Value           : output_files
+Default Value   : --
+Entity Name     : --
+Section Id      : --
++--------------------------------------------------------------------------------+
+
+
+
++--------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                              ;
++--------------------------------------------------------------------------------+
+Module Name                        : Analysis & Synthesis
+Elapsed Time                       : 00:00:03
+Average Processors Used            : 1.0
+Peak Virtual Memory                : 4651 MB
+Total CPU Time (on all processors) : 00:00:03
+
+Module Name                        : Fitter
+Elapsed Time                       : 00:00:06
+Average Processors Used            : 1.2
+Peak Virtual Memory                : 5012 MB
+Total CPU Time (on all processors) : 00:00:06
+
+Module Name                        : Assembler
+Elapsed Time                       : 00:00:00
+Average Processors Used            : 1.0
+Peak Virtual Memory                : 4577 MB
+Total CPU Time (on all processors) : 00:00:01
+
+Module Name                        : TimeQuest Timing Analyzer
+Elapsed Time                       : 00:00:02
+Average Processors Used            : 1.0
+Peak Virtual Memory                : 4589 MB
+Total CPU Time (on all processors) : 00:00:01
+
+Module Name                        : Total
+Elapsed Time                       : 00:00:11
+Average Processors Used            : --
+Peak Virtual Memory                : --
+Total CPU Time (on all processors) : 00:00:11
++--------------------------------------------------------------------------------+
+
+
+
++--------------------------------------------------------------------------------+
+; Flow OS Summary                                                                ;
++--------------------------------------------------------------------------------+
+Module Name      : Analysis & Synthesis
+Machine Hostname : AIR-13
+OS Name          : Windows 7
+OS Version       : 6.2
+Processor type   : x86_64
+
+Module Name      : Fitter
+Machine Hostname : AIR-13
+OS Name          : Windows 7
+OS Version       : 6.2
+Processor type   : x86_64
+
+Module Name      : Assembler
+Machine Hostname : AIR-13
+OS Name          : Windows 7
+OS Version       : 6.2
+Processor type   : x86_64
+
+Module Name      : TimeQuest Timing Analyzer
+Machine Hostname : AIR-13
+OS Name          : Windows 7
+OS Version       : 6.2
+Processor type   : x86_64
++--------------------------------------------------------------------------------+
+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off Lock_Combined -c Lock_Combined
+quartus_fit --read_settings_files=off --write_settings_files=off Lock_Combined -c Lock_Combined
+quartus_asm --read_settings_files=off --write_settings_files=off Lock_Combined -c Lock_Combined
+quartus_sta Lock_Combined -c Lock_Combined
+
+
+

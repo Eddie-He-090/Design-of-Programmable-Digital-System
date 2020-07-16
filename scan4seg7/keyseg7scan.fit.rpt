@@ -1,0 +1,4039 @@
+Fitter report for keyseg7scan
+Fri May 24 19:41:25 2019
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Fitter Summary
+  3. Fitter Settings
+  4. Parallel Compilation
+  5. Ignored Assignments
+  6. Incremental Compilation Preservation Summary
+  7. Incremental Compilation Partition Settings
+  8. Incremental Compilation Placement Preservation
+  9. Pin-Out File
+ 10. Fitter Resource Usage Summary
+ 11. Fitter Partition Statistics
+ 12. Input Pins
+ 13. Output Pins
+ 14. I/O Bank Usage
+ 15. All Package Pins
+ 16. Output Pin Default Load For Reported TCO
+ 17. Fitter Resource Utilization by Entity
+ 18. Delay Chain Summary
+ 19. Pad To Core Delay Chain Fanout
+ 20. Control Signals
+ 21. Global & Other Fast Signals
+ 22. Non-Global High Fan-Out Signals
+ 23. Other Routing Usage Summary
+ 24. LAB Logic Elements
+ 25. LAB-wide Signals
+ 26. LAB Signals Sourced
+ 27. LAB Signals Sourced Out
+ 28. LAB Distinct Inputs
+ 29. Fitter Device Options
+ 30. Operating Settings and Conditions
+ 31. Fitter Messages
+ 32. Fitter Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Fitter Summary                                                                       ;
++------------------------------------+-------------------------------------------------+
+; Fitter Status                      ; Successful - Fri May 24 19:41:25 2019           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; keyseg7scan                                     ;
+; Top-level Entity Name              ; keyseg7scan                                     ;
+; Family                             ; Cyclone II                                      ;
+; Device                             ; EP2C5T144C8                                     ;
+; Timing Models                      ; Final                                           ;
+; Total logic elements               ; 112 / 4,608 ( 2 % )                             ;
+;     Total combinational functions  ; 110 / 4,608 ( 2 % )                             ;
+;     Dedicated logic registers      ; 63 / 4,608 ( 1 % )                              ;
+; Total registers                    ; 63                                              ;
+; Total pins                         ; 16 / 89 ( 18 % )                                ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0 / 119,808 ( 0 % )                             ;
+; Embedded Multiplier 9-bit elements ; 0 / 26 ( 0 % )                                  ;
+; Total PLLs                         ; 0 / 2 ( 0 % )                                   ;
++------------------------------------+-------------------------------------------------+
+
+
++--------------------------------------------------------------------------------+
+; Fitter Settings                                                                ;
++--------------------------------------------------------------------------------+
+Option        : Device
+Setting       : EP2C5T144C8
+Default Value : 
+
+Option        : Minimum Core Junction Temperature
+Setting       : 0
+Default Value : 
+
+Option        : Maximum Core Junction Temperature
+Setting       : 85
+Default Value : 
+
+Option        : Fit Attempts to Skip
+Setting       : 0
+Default Value : 0.0
+
+Option        : Use smart compilation
+Setting       : Off
+Default Value : Off
+
+Option        : Enable parallel Assembler and TimeQuest Timing Analyzer during compilation
+Setting       : On
+Default Value : On
+
+Option        : Enable compact report table
+Setting       : Off
+Default Value : Off
+
+Option        : Auto Merge PLLs
+Setting       : On
+Default Value : On
+
+Option        : Ignore PLL Mode When Merging PLLs
+Setting       : Off
+Default Value : Off
+
+Option        : Router Timing Optimization Level
+Setting       : Normal
+Default Value : Normal
+
+Option        : Placement Effort Multiplier
+Setting       : 1.0
+Default Value : 1.0
+
+Option        : Router Effort Multiplier
+Setting       : 1.0
+Default Value : 1.0
+
+Option        : Always Enable Input Buffers
+Setting       : Off
+Default Value : Off
+
+Option        : Optimize Hold Timing
+Setting       : IO Paths and Minimum TPD Paths
+Default Value : IO Paths and Minimum TPD Paths
+
+Option        : Optimize Multi-Corner Timing
+Setting       : On
+Default Value : On
+
+Option        : PowerPlay Power Optimization
+Setting       : Normal compilation
+Default Value : Normal compilation
+
+Option        : Optimize Timing
+Setting       : Normal compilation
+Default Value : Normal compilation
+
+Option        : Optimize Timing for ECOs
+Setting       : Off
+Default Value : Off
+
+Option        : Regenerate full fit report during ECO compiles
+Setting       : Off
+Default Value : Off
+
+Option        : Optimize IOC Register Placement for Timing
+Setting       : Normal
+Default Value : Normal
+
+Option        : Limit to One Fitting Attempt
+Setting       : Off
+Default Value : Off
+
+Option        : Final Placement Optimizations
+Setting       : Automatically
+Default Value : Automatically
+
+Option        : Fitter Aggressive Routability Optimizations
+Setting       : Automatically
+Default Value : Automatically
+
+Option        : Fitter Initial Placement Seed
+Setting       : 1
+Default Value : 1
+
+Option        : PCI I/O
+Setting       : Off
+Default Value : Off
+
+Option        : Weak Pull-Up Resistor
+Setting       : Off
+Default Value : Off
+
+Option        : Enable Bus-Hold Circuitry
+Setting       : Off
+Default Value : Off
+
+Option        : Auto Global Memory Control Signals
+Setting       : Off
+Default Value : Off
+
+Option        : Auto Packed Registers
+Setting       : Auto
+Default Value : Auto
+
+Option        : Auto Delay Chains
+Setting       : On
+Default Value : On
+
+Option        : Auto Delay Chains for High Fanout Input Pins
+Setting       : Off
+Default Value : Off
+
+Option        : Perform Physical Synthesis for Combinational Logic for Fitting
+Setting       : Off
+Default Value : Off
+
+Option        : Perform Physical Synthesis for Combinational Logic for Performance
+Setting       : Off
+Default Value : Off
+
+Option        : Perform Register Duplication for Performance
+Setting       : Off
+Default Value : Off
+
+Option        : Perform Logic to Memory Mapping for Fitting
+Setting       : Off
+Default Value : Off
+
+Option        : Perform Register Retiming for Performance
+Setting       : Off
+Default Value : Off
+
+Option        : Perform Asynchronous Signal Pipelining
+Setting       : Off
+Default Value : Off
+
+Option        : Fitter Effort
+Setting       : Auto Fit
+Default Value : Auto Fit
+
+Option        : Physical Synthesis Effort Level
+Setting       : Normal
+Default Value : Normal
+
+Option        : Auto Global Clock
+Setting       : On
+Default Value : On
+
+Option        : Auto Global Register Control Signals
+Setting       : On
+Default Value : On
+
+Option        : Force Fitter to Avoid Periphery Placement Warnings
+Setting       : Off
+Default Value : Off
++--------------------------------------------------------------------------------+
+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ; < 0.1%      ;
+;     Processors 3-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------+
+; Ignored Assignments                                                            ;
++--------------------------------------------------------------------------------+
+Name           : Location
+Ignored Entity : 
+Ignored From   : 
+Ignored To     : key2
+Ignored Value  : PIN_89
+Ignored Source : QSF Assignment
+
+Name           : Location
+Ignored Entity : 
+Ignored From   : 
+Ignored To     : key4
+Ignored Value  : PIN_91
+Ignored Source : QSF Assignment
+
+Name           : Location
+Ignored Entity : 
+Ignored From   : 
+Ignored To     : key5
+Ignored Value  : PIN_72
+Ignored Source : QSF Assignment
+
+Name           : Location
+Ignored Entity : 
+Ignored From   : 
+Ignored To     : sd_addr[0]
+Ignored Value  : PIN_76
+Ignored Source : QSF Assignment
+
+Name           : Location
+Ignored Entity : 
+Ignored From   : 
+Ignored To     : sd_addr[10]
+Ignored Value  : PIN_79
+Ignored Source : QSF Assignment
+
+Name           : Location
+Ignored Entity : 
+Ignored From   : 
+Ignored To     : sd_addr[11]
+Ignored Value  : PIN_121
+Ignored Source : QSF Assignment
+
+Name           : Location
+Ignored Entity : 
+Ignored From   : 
+Ignored To     : sd_addr[1]
+Ignored Value  : PIN_75
+Ignored Source : QSF Assignment
+
+Name           : Location
+Ignored Entity : 
+Ignored From   : 
+Ignored To     : sd_addr[2]
+Ignored Value  : PIN_74
+Ignored Source : QSF Assignment
+
+Name           : Location
+Ignored Entity : 
+Ignored From   : 
+Ignored To     : sd_addr[3]
+Ignored Value  : PIN_73
+Ignored Source : QSF Assignment
+
+Name           : Location
+Ignored Entity : 
+Ignored From   : 
+Ignored To     : sd_addr[4]
+Ignored Value  : PIN_113
+Ignored Source : QSF Assignment
+
+Name           : Location
+Ignored Entity : 
+Ignored From   : 
+Ignored To     : sd_addr[5]
+Ignored Value  : PIN_114
+Ignored Source : QSF Assignment
+
+Name           : Location
+Ignored Entity : 
+Ignored From   : 
+Ignored To     : sd_addr[6]
+Ignored Value  : PIN_115
+Ignored Source : QSF Assignment
+
+Name           : Location
+Ignored Entity : 
+Ignored From   : 
+Ignored To     : sd_addr[7]
+Ignored Value  : PIN_118
+Ignored Source : QSF Assignment
+
+Name           : Location
+Ignored Entity : 
+Ignored From   : 
+Ignored To     : sd_addr[8]
+Ignored Value  : PIN_119
+Ignored Source : QSF Assignment
+
+Name           : Location
+Ignored Entity : 
+Ignored From   : 
+Ignored To     : sd_addr[9]
+Ignored Value  : PIN_120
+Ignored Source : QSF Assignment
+
+Name           : Location
+Ignored Entity : 
+Ignored From   : 
+Ignored To     : sd_ba[0]
+Ignored Value  : PIN_81
+Ignored Source : QSF Assignment
+
+Name           : Location
+Ignored Entity : 
+Ignored From   : 
+Ignored To     : sd_ba[1]
+Ignored Value  : PIN_80
+Ignored Source : QSF Assignment
+
+Name           : Location
+Ignored Entity : 
+Ignored From   : 
+Ignored To     : sd_cas
+Ignored Value  : PIN_92
+Ignored Source : QSF Assignment
+
+Name           : Location
+Ignored Entity : 
+Ignored From   : 
+Ignored To     : sd_cke
+Ignored Value  : PIN_122
+Ignored Source : QSF Assignment
+
+Name           : Location
+Ignored Entity : 
+Ignored From   : 
+Ignored To     : sd_clk
+Ignored Value  : PIN_125
+Ignored Source : QSF Assignment
+
+Name           : Location
+Ignored Entity : 
+Ignored From   : 
+Ignored To     : sd_cs
+Ignored Value  : PIN_86
+Ignored Source : QSF Assignment
+
+Name           : Location
+Ignored Entity : 
+Ignored From   : 
+Ignored To     : sd_data[0]
+Ignored Value  : PIN_112
+Ignored Source : QSF Assignment
+
+Name           : Location
+Ignored Entity : 
+Ignored From   : 
+Ignored To     : sd_data[10]
+Ignored Value  : PIN_133
+Ignored Source : QSF Assignment
+
+Name           : Location
+Ignored Entity : 
+Ignored From   : 
+Ignored To     : sd_data[11]
+Ignored Value  : PIN_134
+Ignored Source : QSF Assignment
+
+Name           : Location
+Ignored Entity : 
+Ignored From   : 
+Ignored To     : sd_data[12]
+Ignored Value  : PIN_135
+Ignored Source : QSF Assignment
+
+Name           : Location
+Ignored Entity : 
+Ignored From   : 
+Ignored To     : sd_data[13]
+Ignored Value  : PIN_136
+Ignored Source : QSF Assignment
+
+Name           : Location
+Ignored Entity : 
+Ignored From   : 
+Ignored To     : sd_data[14]
+Ignored Value  : PIN_139
+Ignored Source : QSF Assignment
+
+Name           : Location
+Ignored Entity : 
+Ignored From   : 
+Ignored To     : sd_data[15]
+Ignored Value  : PIN_137
+Ignored Source : QSF Assignment
+
+Name           : Location
+Ignored Entity : 
+Ignored From   : 
+Ignored To     : sd_data[1]
+Ignored Value  : PIN_104
+Ignored Source : QSF Assignment
+
+Name           : Location
+Ignored Entity : 
+Ignored From   : 
+Ignored To     : sd_data[2]
+Ignored Value  : PIN_103
+Ignored Source : QSF Assignment
+
+Name           : Location
+Ignored Entity : 
+Ignored From   : 
+Ignored To     : sd_data[3]
+Ignored Value  : PIN_101
+Ignored Source : QSF Assignment
+
+Name           : Location
+Ignored Entity : 
+Ignored From   : 
+Ignored To     : sd_data[4]
+Ignored Value  : PIN_100
+Ignored Source : QSF Assignment
+
+Name           : Location
+Ignored Entity : 
+Ignored From   : 
+Ignored To     : sd_data[5]
+Ignored Value  : PIN_99
+Ignored Source : QSF Assignment
+
+Name           : Location
+Ignored Entity : 
+Ignored From   : 
+Ignored To     : sd_data[6]
+Ignored Value  : PIN_97
+Ignored Source : QSF Assignment
+
+Name           : Location
+Ignored Entity : 
+Ignored From   : 
+Ignored To     : sd_data[7]
+Ignored Value  : PIN_96
+Ignored Source : QSF Assignment
+
+Name           : Location
+Ignored Entity : 
+Ignored From   : 
+Ignored To     : sd_data[8]
+Ignored Value  : PIN_129
+Ignored Source : QSF Assignment
+
+Name           : Location
+Ignored Entity : 
+Ignored From   : 
+Ignored To     : sd_data[9]
+Ignored Value  : PIN_132
+Ignored Source : QSF Assignment
+
+Name           : Location
+Ignored Entity : 
+Ignored From   : 
+Ignored To     : sd_ldqm
+Ignored Value  : PIN_94
+Ignored Source : QSF Assignment
+
+Name           : Location
+Ignored Entity : 
+Ignored From   : 
+Ignored To     : sd_ras
+Ignored Value  : PIN_87
+Ignored Source : QSF Assignment
+
+Name           : Location
+Ignored Entity : 
+Ignored From   : 
+Ignored To     : sd_udqm
+Ignored Value  : PIN_126
+Ignored Source : QSF Assignment
+
+Name           : Location
+Ignored Entity : 
+Ignored From   : 
+Ignored To     : sd_we
+Ignored Value  : PIN_93
+Ignored Source : QSF Assignment
+
+Name           : Location
+Ignored Entity : 
+Ignored From   : 
+Ignored To     : seg7com[0]
+Ignored Value  : PIN_70
+Ignored Source : QSF Assignment
+
+Name           : Location
+Ignored Entity : 
+Ignored From   : 
+Ignored To     : seg7com[1]
+Ignored Value  : PIN_69
+Ignored Source : QSF Assignment
+
+Name           : Location
+Ignored Entity : 
+Ignored From   : 
+Ignored To     : seg7com[2]
+Ignored Value  : PIN_67
+Ignored Source : QSF Assignment
+
+Name           : Location
+Ignored Entity : 
+Ignored From   : 
+Ignored To     : seg7com[3]
+Ignored Value  : PIN_65
+Ignored Source : QSF Assignment
+
+Name           : Location
+Ignored Entity : 
+Ignored From   : 
+Ignored To     : seg7data[0]
+Ignored Value  : PIN_53
+Ignored Source : QSF Assignment
+
+Name           : Location
+Ignored Entity : 
+Ignored From   : 
+Ignored To     : seg7data[1]
+Ignored Value  : PIN_55
+Ignored Source : QSF Assignment
+
+Name           : Location
+Ignored Entity : 
+Ignored From   : 
+Ignored To     : seg7data[2]
+Ignored Value  : PIN_57
+Ignored Source : QSF Assignment
+
+Name           : Location
+Ignored Entity : 
+Ignored From   : 
+Ignored To     : seg7data[3]
+Ignored Value  : PIN_58
+Ignored Source : QSF Assignment
+
+Name           : Location
+Ignored Entity : 
+Ignored From   : 
+Ignored To     : seg7data[4]
+Ignored Value  : PIN_59
+Ignored Source : QSF Assignment
+
+Name           : Location
+Ignored Entity : 
+Ignored From   : 
+Ignored To     : seg7data[5]
+Ignored Value  : PIN_60
+Ignored Source : QSF Assignment
+
+Name           : Location
+Ignored Entity : 
+Ignored From   : 
+Ignored To     : seg7data[6]
+Ignored Value  : PIN_63
+Ignored Source : QSF Assignment
+
+Name           : Location
+Ignored Entity : 
+Ignored From   : 
+Ignored To     : seg7dp
+Ignored Value  : PIN_64
+Ignored Source : QSF Assignment
++--------------------------------------------------------------------------------+
+
+
+
++----------------------------------------------+
+; Incremental Compilation Preservation Summary ;
++---------------------+------------------------+
+; Type                ; Value                  ;
++---------------------+------------------------+
+; Placement (by node) ;                        ;
+;     -- Requested    ; 0 / 196 ( 0.00 % )     ;
+;     -- Achieved     ; 0 / 196 ( 0.00 % )     ;
+;                     ;                        ;
+; Routing (by net)    ;                        ;
+;     -- Requested    ; 0 / 0 ( 0.00 % )       ;
+;     -- Achieved     ; 0 / 0 ( 0.00 % )       ;
++---------------------+------------------------+
+
+
++--------------------------------------------------------------------------------+
+; Incremental Compilation Partition Settings                                     ;
++--------------------------------------------------------------------------------+
+Partition Name               : Top
+Partition Type               : User-created
+Netlist Type Used            : Source File
+Preservation Level Used      : N/A
+Netlist Type Requested       : Source File
+Preservation Level Requested : N/A
+Contents                     : 
+
+Partition Name               : hard_block:auto_generated_inst
+Partition Type               : Auto-generated
+Netlist Type Used            : Source File
+Preservation Level Used      : N/A
+Netlist Type Requested       : Source File
+Preservation Level Requested : N/A
+Contents                     : hard_block:auto_generated_inst
++--------------------------------------------------------------------------------+
+
+
+
++--------------------------------------------------------------------------------+
+; Incremental Compilation Placement Preservation                                 ;
++--------------------------------------------------------------------------------+
+Partition Name          : Top
+# Nodes                 : 193
+# Preserved Nodes       : 0
+Preservation Level Used : N/A
+Netlist Type Used       : Source File
+
+Partition Name          : hard_block:auto_generated_inst
+# Nodes                 : 3
+# Preserved Nodes       : 0
+Preservation Level Used : N/A
+Netlist Type Used       : Source File
++--------------------------------------------------------------------------------+
+
+
+
++--------------+
+; Pin-Out File ;
++--------------+
+The pin-out file can be found in C:/SCNU/Study/Test/Quartus/scan4seg7/keyseg7scan.pin.
+
+
++-------------------------------------------------------------------+
+; Fitter Resource Usage Summary                                     ;
++---------------------------------------------+---------------------+
+; Resource                                    ; Usage               ;
++---------------------------------------------+---------------------+
+; Total logic elements                        ; 112 / 4,608 ( 2 % ) ;
+;     -- Combinational with no register       ; 49                  ;
+;     -- Register only                        ; 2                   ;
+;     -- Combinational with a register        ; 61                  ;
+;                                             ;                     ;
+; Logic element usage by number of LUT inputs ;                     ;
+;     -- 4 input functions                    ; 27                  ;
+;     -- 3 input functions                    ; 18                  ;
+;     -- <=2 input functions                  ; 65                  ;
+;     -- Register only                        ; 2                   ;
+;                                             ;                     ;
+; Logic elements by mode                      ;                     ;
+;     -- normal mode                          ; 57                  ;
+;     -- arithmetic mode                      ; 53                  ;
+;                                             ;                     ;
+; Total registers*                            ; 63 / 4,851 ( 1 % )  ;
+;     -- Dedicated logic registers            ; 63 / 4,608 ( 1 % )  ;
+;     -- I/O registers                        ; 0 / 243 ( 0 % )     ;
+;                                             ;                     ;
+; Total LABs:  partially or completely used   ; 11 / 288 ( 4 % )    ;
+; Virtual pins                                ; 0                   ;
+; I/O pins                                    ; 16 / 89 ( 18 % )    ;
+;     -- Clock pins                           ; 3 / 4 ( 75 % )      ;
+;                                             ;                     ;
+; Global signals                              ; 3                   ;
+; M4Ks                                        ; 0 / 26 ( 0 % )      ;
+; Total block memory bits                     ; 0 / 119,808 ( 0 % ) ;
+; Total block memory implementation bits      ; 0 / 119,808 ( 0 % ) ;
+; Embedded Multiplier 9-bit elements          ; 0 / 26 ( 0 % )      ;
+; PLLs                                        ; 0 / 2 ( 0 % )       ;
+; Global clocks                               ; 3 / 8 ( 38 % )      ;
+; JTAGs                                       ; 0 / 1 ( 0 % )       ;
+; ASMI blocks                                 ; 0 / 1 ( 0 % )       ;
+; CRC blocks                                  ; 0 / 1 ( 0 % )       ;
+; Average interconnect usage (total/H/V)      ; 0% / 0% / 0%        ;
+; Peak interconnect usage (total/H/V)         ; 0% / 0% / 0%        ;
+; Maximum fan-out                             ; 61                  ;
+; Highest non-global fan-out                  ; 31                  ;
+; Total fan-out                               ; 494                 ;
+; Average fan-out                             ; 2.53                ;
++---------------------------------------------+---------------------+
+*  Register count does not include registers inside RAM blocks or DSP blocks.
+
+
+
++--------------------------------------------------------------------------------+
+; Fitter Partition Statistics                                                    ;
++--------------------------------------------------------------------------------+
+Statistic                      : Difficulty Clustering Region
+Top                            : Low
+hard_block:auto_generated_inst : Low
+
+Statistic                      : 
+Top                            : 
+hard_block:auto_generated_inst : 
+
+Statistic                      : Total logic elements
+Top                            : 112 / 4608 ( 2 % )
+hard_block:auto_generated_inst : 0 / 4608 ( 0 % )
+
+Statistic                      :     -- Combinational with no register
+Top                            : 49
+hard_block:auto_generated_inst : 0
+
+Statistic                      :     -- Register only
+Top                            : 2
+hard_block:auto_generated_inst : 0
+
+Statistic                      :     -- Combinational with a register
+Top                            : 61
+hard_block:auto_generated_inst : 0
+
+Statistic                      : 
+Top                            : 
+hard_block:auto_generated_inst : 
+
+Statistic                      : Logic element usage by number of LUT inputs
+Top                            : 
+hard_block:auto_generated_inst : 
+
+Statistic                      :     -- 4 input functions
+Top                            : 27
+hard_block:auto_generated_inst : 0
+
+Statistic                      :     -- 3 input functions
+Top                            : 18
+hard_block:auto_generated_inst : 0
+
+Statistic                      :     -- <=2 input functions
+Top                            : 65
+hard_block:auto_generated_inst : 0
+
+Statistic                      :     -- Register only
+Top                            : 2
+hard_block:auto_generated_inst : 0
+
+Statistic                      : 
+Top                            : 
+hard_block:auto_generated_inst : 
+
+Statistic                      : Logic elements by mode
+Top                            : 
+hard_block:auto_generated_inst : 
+
+Statistic                      :     -- normal mode
+Top                            : 57
+hard_block:auto_generated_inst : 0
+
+Statistic                      :     -- arithmetic mode
+Top                            : 53
+hard_block:auto_generated_inst : 0
+
+Statistic                      : 
+Top                            : 
+hard_block:auto_generated_inst : 
+
+Statistic                      : Total registers
+Top                            : 63
+hard_block:auto_generated_inst : 0
+
+Statistic                      :     -- Dedicated logic registers
+Top                            : 63 / 4608 ( 1 % )
+hard_block:auto_generated_inst : 0 / 4608 ( 0 % )
+
+Statistic                      : 
+Top                            : 
+hard_block:auto_generated_inst : 
+
+Statistic                      : Total LABs:  partially or completely used
+Top                            : 11 / 288 ( 4 % )
+hard_block:auto_generated_inst : 0 / 288 ( 0 % )
+
+Statistic                      : 
+Top                            : 
+hard_block:auto_generated_inst : 
+
+Statistic                      : Virtual pins
+Top                            : 0
+hard_block:auto_generated_inst : 0
+
+Statistic                      : I/O pins
+Top                            : 16
+hard_block:auto_generated_inst : 0
+
+Statistic                      : Embedded Multiplier 9-bit elements
+Top                            : 0 / 26 ( 0 % )
+hard_block:auto_generated_inst : 0 / 26 ( 0 % )
+
+Statistic                      : Total memory bits
+Top                            : 0
+hard_block:auto_generated_inst : 0
+
+Statistic                      : Total RAM block bits
+Top                            : 0
+hard_block:auto_generated_inst : 0
+
+Statistic                      : Clock control block
+Top                            : 3 / 10 ( 30 % )
+hard_block:auto_generated_inst : 0 / 10 ( 0 % )
+
+Statistic                      : 
+Top                            : 
+hard_block:auto_generated_inst : 
+
+Statistic                      : Connections
+Top                            : 
+hard_block:auto_generated_inst : 
+
+Statistic                      :     -- Input Connections
+Top                            : 0
+hard_block:auto_generated_inst : 0
+
+Statistic                      :     -- Registered Input Connections
+Top                            : 0
+hard_block:auto_generated_inst : 0
+
+Statistic                      :     -- Output Connections
+Top                            : 0
+hard_block:auto_generated_inst : 0
+
+Statistic                      :     -- Registered Output Connections
+Top                            : 0
+hard_block:auto_generated_inst : 0
+
+Statistic                      : 
+Top                            : 
+hard_block:auto_generated_inst : 
+
+Statistic                      : Internal Connections
+Top                            : 
+hard_block:auto_generated_inst : 
+
+Statistic                      :     -- Total Connections
+Top                            : 494
+hard_block:auto_generated_inst : 0
+
+Statistic                      :     -- Registered Connections
+Top                            : 158
+hard_block:auto_generated_inst : 0
+
+Statistic                      : 
+Top                            : 
+hard_block:auto_generated_inst : 
+
+Statistic                      : External Connections
+Top                            : 
+hard_block:auto_generated_inst : 
+
+Statistic                      :     -- Top
+Top                            : 0
+hard_block:auto_generated_inst : 0
+
+Statistic                      :     -- hard_block:auto_generated_inst
+Top                            : 0
+hard_block:auto_generated_inst : 0
+
+Statistic                      : 
+Top                            : 
+hard_block:auto_generated_inst : 
+
+Statistic                      : Partition Interface
+Top                            : 
+hard_block:auto_generated_inst : 
+
+Statistic                      :     -- Input Ports
+Top                            : 3
+hard_block:auto_generated_inst : 0
+
+Statistic                      :     -- Output Ports
+Top                            : 13
+hard_block:auto_generated_inst : 0
+
+Statistic                      :     -- Bidir Ports
+Top                            : 0
+hard_block:auto_generated_inst : 0
+
+Statistic                      : 
+Top                            : 
+hard_block:auto_generated_inst : 
+
+Statistic                      : Registered Ports
+Top                            : 
+hard_block:auto_generated_inst : 
+
+Statistic                      :     -- Registered Input Ports
+Top                            : 0
+hard_block:auto_generated_inst : 0
+
+Statistic                      :     -- Registered Output Ports
+Top                            : 0
+hard_block:auto_generated_inst : 0
+
+Statistic                      : 
+Top                            : 
+hard_block:auto_generated_inst : 
+
+Statistic                      : Port Connectivity
+Top                            : 
+hard_block:auto_generated_inst : 
+
+Statistic                      :     -- Input Ports driven by GND
+Top                            : 0
+hard_block:auto_generated_inst : 0
+
+Statistic                      :     -- Output Ports driven by GND
+Top                            : 0
+hard_block:auto_generated_inst : 0
+
+Statistic                      :     -- Input Ports driven by VCC
+Top                            : 0
+hard_block:auto_generated_inst : 0
+
+Statistic                      :     -- Output Ports driven by VCC
+Top                            : 0
+hard_block:auto_generated_inst : 0
+
+Statistic                      :     -- Input Ports with no Source
+Top                            : 0
+hard_block:auto_generated_inst : 0
+
+Statistic                      :     -- Output Ports with no Source
+Top                            : 0
+hard_block:auto_generated_inst : 0
+
+Statistic                      :     -- Input Ports with no Fanout
+Top                            : 0
+hard_block:auto_generated_inst : 0
+
+Statistic                      :     -- Output Ports with no Fanout
+Top                            : 0
+hard_block:auto_generated_inst : 0
++--------------------------------------------------------------------------------+
+
+
+
++--------------------------------------------------------------------------------+
+; Input Pins                                                                     ;
++--------------------------------------------------------------------------------+
+Name                  : clk
+Pin #                 : 17
+I/O Bank              : 1
+X coordinate          : 0
+Y coordinate          : 6
+Cell number           : 0
+Combinational Fan-Out : 1
+Registered Fan-Out    : 0
+Global                : yes
+Input Register        : no
+Power Up High         : no
+PCI I/O Enabled       : no
+Bus Hold              : no
+Weak Pull Up          : Off
+I/O Standard          : 3.3-V LVTTL
+Termination           : Off
+Location assigned by  : User
+
+Name                  : key1
+Pin #                 : 88
+I/O Bank              : 3
+X coordinate          : 28
+Y coordinate          : 7
+Cell number           : 3
+Combinational Fan-Out : 31
+Registered Fan-Out    : 0
+Global                : no
+Input Register        : no
+Power Up High         : no
+PCI I/O Enabled       : no
+Bus Hold              : no
+Weak Pull Up          : Off
+I/O Standard          : 3.3-V LVTTL
+Termination           : Off
+Location assigned by  : User
+
+Name                  : rst
+Pin #                 : 90
+I/O Bank              : 3
+X coordinate          : 28
+Y coordinate          : 7
+Cell number           : 1
+Combinational Fan-Out : 6
+Registered Fan-Out    : 0
+Global                : yes
+Input Register        : no
+Power Up High         : no
+PCI I/O Enabled       : no
+Bus Hold              : no
+Weak Pull Up          : Off
+I/O Standard          : 3.3-V LVTTL
+Termination           : Off
+Location assigned by  : User
++--------------------------------------------------------------------------------+
+
+
+
++--------------------------------------------------------------------------------+
+; Output Pins                                                                    ;
++--------------------------------------------------------------------------------+
+Name                   : dig[0]
+Pin #                  : 70
+I/O Bank               : 4
+X coordinate           : 26
+Y coordinate           : 0
+Cell number            : 2
+Output Register        : no
+Output Enable Register : no
+Power Up High          : no
+PCI I/O Enabled        : no
+Open Drain             : no
+TRI Primitive          : no
+Bus Hold               : no
+Weak Pull Up           : Off
+I/O Standard           : 3.3-V LVTTL
+Current Strength       : 24mA
+Termination            : Off
+Location assigned by   : User
+Load                   : 0 pF
+Output Enable Source   : -
+Output Enable Group    : -
+
+Name                   : dig[1]
+Pin #                  : 69
+I/O Bank               : 4
+X coordinate           : 26
+Y coordinate           : 0
+Cell number            : 3
+Output Register        : no
+Output Enable Register : no
+Power Up High          : no
+PCI I/O Enabled        : no
+Open Drain             : no
+TRI Primitive          : no
+Bus Hold               : no
+Weak Pull Up           : Off
+I/O Standard           : 3.3-V LVTTL
+Current Strength       : 24mA
+Termination            : Off
+Location assigned by   : User
+Load                   : 0 pF
+Output Enable Source   : -
+Output Enable Group    : -
+
+Name                   : dig[2]
+Pin #                  : 67
+I/O Bank               : 4
+X coordinate           : 24
+Y coordinate           : 0
+Cell number            : 0
+Output Register        : no
+Output Enable Register : no
+Power Up High          : no
+PCI I/O Enabled        : no
+Open Drain             : no
+TRI Primitive          : no
+Bus Hold               : no
+Weak Pull Up           : Off
+I/O Standard           : 3.3-V LVTTL
+Current Strength       : 24mA
+Termination            : Off
+Location assigned by   : User
+Load                   : 0 pF
+Output Enable Source   : -
+Output Enable Group    : -
+
+Name                   : dig[3]
+Pin #                  : 65
+I/O Bank               : 4
+X coordinate           : 21
+Y coordinate           : 0
+Cell number            : 0
+Output Register        : no
+Output Enable Register : no
+Power Up High          : no
+PCI I/O Enabled        : no
+Open Drain             : no
+TRI Primitive          : no
+Bus Hold               : no
+Weak Pull Up           : Off
+I/O Standard           : 3.3-V LVTTL
+Current Strength       : 24mA
+Termination            : Off
+Location assigned by   : User
+Load                   : 0 pF
+Output Enable Source   : -
+Output Enable Group    : -
+
+Name                   : led
+Pin #                  : 71
+I/O Bank               : 4
+X coordinate           : 26
+Y coordinate           : 0
+Cell number            : 1
+Output Register        : no
+Output Enable Register : no
+Power Up High          : no
+PCI I/O Enabled        : no
+Open Drain             : no
+TRI Primitive          : no
+Bus Hold               : no
+Weak Pull Up           : Off
+I/O Standard           : 3.3-V LVTTL
+Current Strength       : 24mA
+Termination            : Off
+Location assigned by   : User
+Load                   : 0 pF
+Output Enable Source   : -
+Output Enable Group    : -
+
+Name                   : seg[0]
+Pin #                  : 53
+I/O Bank               : 4
+X coordinate           : 9
+Y coordinate           : 0
+Cell number            : 1
+Output Register        : no
+Output Enable Register : no
+Power Up High          : no
+PCI I/O Enabled        : no
+Open Drain             : no
+TRI Primitive          : no
+Bus Hold               : no
+Weak Pull Up           : Off
+I/O Standard           : 3.3-V LVTTL
+Current Strength       : 24mA
+Termination            : Off
+Location assigned by   : User
+Load                   : 0 pF
+Output Enable Source   : -
+Output Enable Group    : -
+
+Name                   : seg[1]
+Pin #                  : 55
+I/O Bank               : 4
+X coordinate           : 9
+Y coordinate           : 0
+Cell number            : 0
+Output Register        : no
+Output Enable Register : no
+Power Up High          : no
+PCI I/O Enabled        : no
+Open Drain             : no
+TRI Primitive          : no
+Bus Hold               : no
+Weak Pull Up           : Off
+I/O Standard           : 3.3-V LVTTL
+Current Strength       : 24mA
+Termination            : Off
+Location assigned by   : User
+Load                   : 0 pF
+Output Enable Source   : -
+Output Enable Group    : -
+
+Name                   : seg[2]
+Pin #                  : 57
+I/O Bank               : 4
+X coordinate           : 12
+Y coordinate           : 0
+Cell number            : 1
+Output Register        : no
+Output Enable Register : no
+Power Up High          : no
+PCI I/O Enabled        : no
+Open Drain             : no
+TRI Primitive          : no
+Bus Hold               : no
+Weak Pull Up           : Off
+I/O Standard           : 3.3-V LVTTL
+Current Strength       : 24mA
+Termination            : Off
+Location assigned by   : User
+Load                   : 0 pF
+Output Enable Source   : -
+Output Enable Group    : -
+
+Name                   : seg[3]
+Pin #                  : 58
+I/O Bank               : 4
+X coordinate           : 12
+Y coordinate           : 0
+Cell number            : 0
+Output Register        : no
+Output Enable Register : no
+Power Up High          : no
+PCI I/O Enabled        : no
+Open Drain             : no
+TRI Primitive          : no
+Bus Hold               : no
+Weak Pull Up           : Off
+I/O Standard           : 3.3-V LVTTL
+Current Strength       : 24mA
+Termination            : Off
+Location assigned by   : User
+Load                   : 0 pF
+Output Enable Source   : -
+Output Enable Group    : -
+
+Name                   : seg[4]
+Pin #                  : 59
+I/O Bank               : 4
+X coordinate           : 14
+Y coordinate           : 0
+Cell number            : 1
+Output Register        : no
+Output Enable Register : no
+Power Up High          : no
+PCI I/O Enabled        : no
+Open Drain             : no
+TRI Primitive          : no
+Bus Hold               : no
+Weak Pull Up           : Off
+I/O Standard           : 3.3-V LVTTL
+Current Strength       : 24mA
+Termination            : Off
+Location assigned by   : User
+Load                   : 0 pF
+Output Enable Source   : -
+Output Enable Group    : -
+
+Name                   : seg[5]
+Pin #                  : 60
+I/O Bank               : 4
+X coordinate           : 14
+Y coordinate           : 0
+Cell number            : 0
+Output Register        : no
+Output Enable Register : no
+Power Up High          : no
+PCI I/O Enabled        : no
+Open Drain             : no
+TRI Primitive          : no
+Bus Hold               : no
+Weak Pull Up           : Off
+I/O Standard           : 3.3-V LVTTL
+Current Strength       : 24mA
+Termination            : Off
+Location assigned by   : User
+Load                   : 0 pF
+Output Enable Source   : -
+Output Enable Group    : -
+
+Name                   : seg[6]
+Pin #                  : 63
+I/O Bank               : 4
+X coordinate           : 19
+Y coordinate           : 0
+Cell number            : 0
+Output Register        : no
+Output Enable Register : no
+Power Up High          : no
+PCI I/O Enabled        : no
+Open Drain             : no
+TRI Primitive          : no
+Bus Hold               : no
+Weak Pull Up           : Off
+I/O Standard           : 3.3-V LVTTL
+Current Strength       : 24mA
+Termination            : Off
+Location assigned by   : User
+Load                   : 0 pF
+Output Enable Source   : -
+Output Enable Group    : -
+
+Name                   : seg[7]
+Pin #                  : 64
+I/O Bank               : 4
+X coordinate           : 21
+Y coordinate           : 0
+Cell number            : 1
+Output Register        : no
+Output Enable Register : no
+Power Up High          : no
+PCI I/O Enabled        : no
+Open Drain             : no
+TRI Primitive          : no
+Bus Hold               : no
+Weak Pull Up           : Off
+I/O Standard           : 3.3-V LVTTL
+Current Strength       : 24mA
+Termination            : Off
+Location assigned by   : User
+Load                   : 0 pF
+Output Enable Source   : -
+Output Enable Group    : -
++--------------------------------------------------------------------------------+
+
+
+
++--------------------------------------------------------------------------------+
+; I/O Bank Usage                                                                 ;
++--------------------------------------------------------------------------------+
+I/O Bank      : 1
+Usage         : 3 / 19 ( 16 % )
+VCCIO Voltage : 3.3V
+VREF Voltage  : --
+
+I/O Bank      : 2
+Usage         : 0 / 23 ( 0 % )
+VCCIO Voltage : 3.3V
+VREF Voltage  : --
+
+I/O Bank      : 3
+Usage         : 3 / 23 ( 13 % )
+VCCIO Voltage : 3.3V
+VREF Voltage  : --
+
+I/O Bank      : 4
+Usage         : 13 / 24 ( 54 % )
+VCCIO Voltage : 3.3V
+VREF Voltage  : --
++--------------------------------------------------------------------------------+
+
+
+
++--------------------------------------------------------------------------------+
+; All Package Pins                                                               ;
++--------------------------------------------------------------------------------+
+Location        : 1
+Pad Number      : 0
+I/O Bank        : 1
+Pin Name/Usage  : ~ASDO~ / RESERVED_INPUT_WITH_WEAK_PULLUP
+Dir.            : input
+I/O Standard    : 3.3-V LVTTL
+Voltage         : 
+I/O Type        : Row I/O
+User Assignment : N
+Bus Hold        : no
+Weak Pull Up    : On
+
+Location        : 2
+Pad Number      : 1
+I/O Bank        : 1
+Pin Name/Usage  : ~nCSO~ / RESERVED_INPUT_WITH_WEAK_PULLUP
+Dir.            : input
+I/O Standard    : 3.3-V LVTTL
+Voltage         : 
+I/O Type        : Row I/O
+User Assignment : N
+Bus Hold        : no
+Weak Pull Up    : On
+
+Location        : 3
+Pad Number      : 2
+I/O Bank        : 1
+Pin Name/Usage  : RESERVED_INPUT
+Dir.            : 
+I/O Standard    : 
+Voltage         : 
+I/O Type        : Row I/O
+User Assignment : 
+Bus Hold        : no
+Weak Pull Up    : Off
+
+Location        : 4
+Pad Number      : 3
+I/O Bank        : 1
+Pin Name/Usage  : RESERVED_INPUT
+Dir.            : 
+I/O Standard    : 
+Voltage         : 
+I/O Type        : Row I/O
+User Assignment : 
+Bus Hold        : no
+Weak Pull Up    : Off
+
+Location        : 5
+Pad Number      : 
+I/O Bank        : 1
+Pin Name/Usage  : VCCIO1
+Dir.            : power
+I/O Standard    : 
+Voltage         : 3.3V
+I/O Type        : --
+User Assignment : 
+Bus Hold        : --
+Weak Pull Up    : --
+
+Location        : 6
+Pad Number      : 
+I/O Bank        : 
+Pin Name/Usage  : GND
+Dir.            : gnd
+I/O Standard    : 
+Voltage         : 
+I/O Type        : --
+User Assignment : 
+Bus Hold        : --
+Weak Pull Up    : --
+
+Location        : 7
+Pad Number      : 10
+I/O Bank        : 1
+Pin Name/Usage  : RESERVED_INPUT
+Dir.            : 
+I/O Standard    : 
+Voltage         : 
+I/O Type        : Row I/O
+User Assignment : 
+Bus Hold        : --
+Weak Pull Up    : --
+
+Location        : 8
+Pad Number      : 11
+I/O Bank        : 1
+Pin Name/Usage  : RESERVED_INPUT
+Dir.            : 
+I/O Standard    : 
+Voltage         : 
+I/O Type        : Row I/O
+User Assignment : 
+Bus Hold        : no
+Weak Pull Up    : Off
+
+Location        : 9
+Pad Number      : 12
+I/O Bank        : 1
+Pin Name/Usage  : RESERVED_INPUT
+Dir.            : 
+I/O Standard    : 
+Voltage         : 
+I/O Type        : Row I/O
+User Assignment : 
+Bus Hold        : no
+Weak Pull Up    : Off
+
+Location        : 10
+Pad Number      : 13
+I/O Bank        : 1
+Pin Name/Usage  : #TDO
+Dir.            : output
+I/O Standard    : 
+Voltage         : 
+I/O Type        : --
+User Assignment : 
+Bus Hold        : --
+Weak Pull Up    : --
+
+Location        : 11
+Pad Number      : 14
+I/O Bank        : 1
+Pin Name/Usage  : #TMS
+Dir.            : input
+I/O Standard    : 
+Voltage         : 
+I/O Type        : --
+User Assignment : 
+Bus Hold        : --
+Weak Pull Up    : --
+
+Location        : 12
+Pad Number      : 15
+I/O Bank        : 1
+Pin Name/Usage  : #TCK
+Dir.            : input
+I/O Standard    : 
+Voltage         : 
+I/O Type        : --
+User Assignment : 
+Bus Hold        : --
+Weak Pull Up    : --
+
+Location        : 13
+Pad Number      : 16
+I/O Bank        : 1
+Pin Name/Usage  : #TDI
+Dir.            : input
+I/O Standard    : 
+Voltage         : 
+I/O Type        : --
+User Assignment : 
+Bus Hold        : --
+Weak Pull Up    : --
+
+Location        : 14
+Pad Number      : 17
+I/O Bank        : 1
+Pin Name/Usage  : ^DATA0
+Dir.            : input
+I/O Standard    : 
+Voltage         : 
+I/O Type        : --
+User Assignment : 
+Bus Hold        : --
+Weak Pull Up    : --
+
+Location        : 15
+Pad Number      : 18
+I/O Bank        : 1
+Pin Name/Usage  : ^DCLK
+Dir.            : 
+I/O Standard    : 
+Voltage         : 
+I/O Type        : --
+User Assignment : 
+Bus Hold        : --
+Weak Pull Up    : --
+
+Location        : 16
+Pad Number      : 19
+I/O Bank        : 1
+Pin Name/Usage  : ^nCE
+Dir.            : 
+I/O Standard    : 
+Voltage         : 
+I/O Type        : --
+User Assignment : 
+Bus Hold        : --
+Weak Pull Up    : --
+
+Location        : 17
+Pad Number      : 20
+I/O Bank        : 1
+Pin Name/Usage  : clk
+Dir.            : input
+I/O Standard    : 3.3-V LVTTL
+Voltage         : 
+I/O Type        : Row I/O
+User Assignment : Y
+Bus Hold        : no
+Weak Pull Up    : Off
+
+Location        : 18
+Pad Number      : 21
+I/O Bank        : 1
+Pin Name/Usage  : GND+
+Dir.            : 
+I/O Standard    : 
+Voltage         : 
+I/O Type        : Row I/O
+User Assignment : 
+Bus Hold        : --
+Weak Pull Up    : --
+
+Location        : 19
+Pad Number      : 
+I/O Bank        : 
+Pin Name/Usage  : GND
+Dir.            : gnd
+I/O Standard    : 
+Voltage         : 
+I/O Type        : --
+User Assignment : 
+Bus Hold        : --
+Weak Pull Up    : --
+
+Location        : 20
+Pad Number      : 22
+I/O Bank        : 1
+Pin Name/Usage  : ^nCONFIG
+Dir.            : 
+I/O Standard    : 
+Voltage         : 
+I/O Type        : --
+User Assignment : 
+Bus Hold        : --
+Weak Pull Up    : --
+
+Location        : 21
+Pad Number      : 23
+I/O Bank        : 1
+Pin Name/Usage  : GND+
+Dir.            : 
+I/O Standard    : 
+Voltage         : 
+I/O Type        : Row I/O
+User Assignment : 
+Bus Hold        : --
+Weak Pull Up    : --
+
+Location        : 22
+Pad Number      : 24
+I/O Bank        : 1
+Pin Name/Usage  : GND+
+Dir.            : 
+I/O Standard    : 
+Voltage         : 
+I/O Type        : Row I/O
+User Assignment : 
+Bus Hold        : --
+Weak Pull Up    : --
+
+Location        : 23
+Pad Number      : 
+I/O Bank        : 1
+Pin Name/Usage  : VCCIO1
+Dir.            : power
+I/O Standard    : 
+Voltage         : 3.3V
+I/O Type        : --
+User Assignment : 
+Bus Hold        : --
+Weak Pull Up    : --
+
+Location        : 24
+Pad Number      : 25
+I/O Bank        : 1
+Pin Name/Usage  : RESERVED_INPUT
+Dir.            : 
+I/O Standard    : 
+Voltage         : 
+I/O Type        : Row I/O
+User Assignment : 
+Bus Hold        : no
+Weak Pull Up    : Off
+
+Location        : 25
+Pad Number      : 26
+I/O Bank        : 1
+Pin Name/Usage  : RESERVED_INPUT
+Dir.            : 
+I/O Standard    : 
+Voltage         : 
+I/O Type        : Row I/O
+User Assignment : 
+Bus Hold        : no
+Weak Pull Up    : Off
+
+Location        : 26
+Pad Number      : 27
+I/O Bank        : 1
+Pin Name/Usage  : RESERVED_INPUT
+Dir.            : 
+I/O Standard    : 
+Voltage         : 
+I/O Type        : Row I/O
+User Assignment : 
+Bus Hold        : no
+Weak Pull Up    : Off
+
+Location        : 27
+Pad Number      : 28
+I/O Bank        : 1
+Pin Name/Usage  : RESERVED_INPUT
+Dir.            : 
+I/O Standard    : 
+Voltage         : 
+I/O Type        : Row I/O
+User Assignment : 
+Bus Hold        : no
+Weak Pull Up    : Off
+
+Location        : 28
+Pad Number      : 32
+I/O Bank        : 1
+Pin Name/Usage  : RESERVED_INPUT
+Dir.            : 
+I/O Standard    : 
+Voltage         : 
+I/O Type        : Row I/O
+User Assignment : 
+Bus Hold        : --
+Weak Pull Up    : --
+
+Location        : 29
+Pad Number      : 
+I/O Bank        : 1
+Pin Name/Usage  : VCCIO1
+Dir.            : power
+I/O Standard    : 
+Voltage         : 3.3V
+I/O Type        : --
+User Assignment : 
+Bus Hold        : --
+Weak Pull Up    : --
+
+Location        : 30
+Pad Number      : 40
+I/O Bank        : 1
+Pin Name/Usage  : RESERVED_INPUT
+Dir.            : 
+I/O Standard    : 
+Voltage         : 
+I/O Type        : Row I/O
+User Assignment : 
+Bus Hold        : no
+Weak Pull Up    : Off
+
+Location        : 31
+Pad Number      : 41
+I/O Bank        : 1
+Pin Name/Usage  : RESERVED_INPUT
+Dir.            : 
+I/O Standard    : 
+Voltage         : 
+I/O Type        : Row I/O
+User Assignment : 
+Bus Hold        : no
+Weak Pull Up    : Off
+
+Location        : 32
+Pad Number      : 42
+I/O Bank        : 1
+Pin Name/Usage  : RESERVED_INPUT
+Dir.            : 
+I/O Standard    : 
+Voltage         : 
+I/O Type        : Row I/O
+User Assignment : 
+Bus Hold        : no
+Weak Pull Up    : Off
+
+Location        : 33
+Pad Number      : 
+I/O Bank        : 
+Pin Name/Usage  : GND
+Dir.            : gnd
+I/O Standard    : 
+Voltage         : 
+I/O Type        : --
+User Assignment : 
+Bus Hold        : --
+Weak Pull Up    : --
+
+Location        : 34
+Pad Number      : 
+I/O Bank        : 
+Pin Name/Usage  : GND_PLL1
+Dir.            : gnd
+I/O Standard    : 
+Voltage         : 
+I/O Type        : --
+User Assignment : 
+Bus Hold        : --
+Weak Pull Up    : --
+
+Location        : 35
+Pad Number      : 
+I/O Bank        : 
+Pin Name/Usage  : VCCD_PLL1
+Dir.            : power
+I/O Standard    : 
+Voltage         : 1.2V
+I/O Type        : --
+User Assignment : 
+Bus Hold        : --
+Weak Pull Up    : --
+
+Location        : 36
+Pad Number      : 
+I/O Bank        : 
+Pin Name/Usage  : GND_PLL1
+Dir.            : gnd
+I/O Standard    : 
+Voltage         : 
+I/O Type        : --
+User Assignment : 
+Bus Hold        : --
+Weak Pull Up    : --
+
+Location        : 37
+Pad Number      : 
+I/O Bank        : 
+Pin Name/Usage  : VCCA_PLL1
+Dir.            : power
+I/O Standard    : 
+Voltage         : 1.2V
+I/O Type        : --
+User Assignment : 
+Bus Hold        : --
+Weak Pull Up    : --
+
+Location        : 38
+Pad Number      : 
+I/O Bank        : 
+Pin Name/Usage  : GNDA_PLL1
+Dir.            : gnd
+I/O Standard    : 
+Voltage         : 
+I/O Type        : --
+User Assignment : 
+Bus Hold        : --
+Weak Pull Up    : --
+
+Location        : 39
+Pad Number      : 
+I/O Bank        : 
+Pin Name/Usage  : GND
+Dir.            : gnd
+I/O Standard    : 
+Voltage         : 
+I/O Type        : --
+User Assignment : 
+Bus Hold        : --
+Weak Pull Up    : --
+
+Location        : 40
+Pad Number      : 43
+I/O Bank        : 4
+Pin Name/Usage  : RESERVED_INPUT
+Dir.            : 
+I/O Standard    : 
+Voltage         : 
+I/O Type        : Column I/O
+User Assignment : 
+Bus Hold        : no
+Weak Pull Up    : Off
+
+Location        : 41
+Pad Number      : 44
+I/O Bank        : 4
+Pin Name/Usage  : RESERVED_INPUT
+Dir.            : 
+I/O Standard    : 
+Voltage         : 
+I/O Type        : Column I/O
+User Assignment : 
+Bus Hold        : no
+Weak Pull Up    : Off
+
+Location        : 42
+Pad Number      : 45
+I/O Bank        : 4
+Pin Name/Usage  : RESERVED_INPUT
+Dir.            : 
+I/O Standard    : 
+Voltage         : 
+I/O Type        : Column I/O
+User Assignment : 
+Bus Hold        : no
+Weak Pull Up    : Off
+
+Location        : 43
+Pad Number      : 46
+I/O Bank        : 4
+Pin Name/Usage  : RESERVED_INPUT
+Dir.            : 
+I/O Standard    : 
+Voltage         : 
+I/O Type        : Column I/O
+User Assignment : 
+Bus Hold        : no
+Weak Pull Up    : Off
+
+Location        : 44
+Pad Number      : 47
+I/O Bank        : 4
+Pin Name/Usage  : RESERVED_INPUT
+Dir.            : 
+I/O Standard    : 
+Voltage         : 
+I/O Type        : Column I/O
+User Assignment : 
+Bus Hold        : no
+Weak Pull Up    : Off
+
+Location        : 45
+Pad Number      : 48
+I/O Bank        : 4
+Pin Name/Usage  : RESERVED_INPUT
+Dir.            : 
+I/O Standard    : 
+Voltage         : 
+I/O Type        : Column I/O
+User Assignment : 
+Bus Hold        : no
+Weak Pull Up    : Off
+
+Location        : 46
+Pad Number      : 
+I/O Bank        : 4
+Pin Name/Usage  : VCCIO4
+Dir.            : power
+I/O Standard    : 
+Voltage         : 3.3V
+I/O Type        : --
+User Assignment : 
+Bus Hold        : --
+Weak Pull Up    : --
+
+Location        : 47
+Pad Number      : 49
+I/O Bank        : 4
+Pin Name/Usage  : RESERVED_INPUT
+Dir.            : 
+I/O Standard    : 
+Voltage         : 
+I/O Type        : Column I/O
+User Assignment : 
+Bus Hold        : no
+Weak Pull Up    : Off
+
+Location        : 48
+Pad Number      : 50
+I/O Bank        : 4
+Pin Name/Usage  : RESERVED_INPUT
+Dir.            : 
+I/O Standard    : 
+Voltage         : 
+I/O Type        : Column I/O
+User Assignment : 
+Bus Hold        : no
+Weak Pull Up    : Off
+
+Location        : 49
+Pad Number      : 
+I/O Bank        : 
+Pin Name/Usage  : GND
+Dir.            : gnd
+I/O Standard    : 
+Voltage         : 
+I/O Type        : --
+User Assignment : 
+Bus Hold        : --
+Weak Pull Up    : --
+
+Location        : 50
+Pad Number      : 
+I/O Bank        : 
+Pin Name/Usage  : VCCINT
+Dir.            : power
+I/O Standard    : 
+Voltage         : 1.2V
+I/O Type        : --
+User Assignment : 
+Bus Hold        : --
+Weak Pull Up    : --
+
+Location        : 51
+Pad Number      : 52
+I/O Bank        : 4
+Pin Name/Usage  : RESERVED_INPUT
+Dir.            : 
+I/O Standard    : 
+Voltage         : 
+I/O Type        : Column I/O
+User Assignment : 
+Bus Hold        : --
+Weak Pull Up    : --
+
+Location        : 52
+Pad Number      : 53
+I/O Bank        : 4
+Pin Name/Usage  : RESERVED_INPUT
+Dir.            : 
+I/O Standard    : 
+Voltage         : 
+I/O Type        : Column I/O
+User Assignment : 
+Bus Hold        : no
+Weak Pull Up    : Off
+
+Location        : 53
+Pad Number      : 57
+I/O Bank        : 4
+Pin Name/Usage  : seg[0]
+Dir.            : output
+I/O Standard    : 3.3-V LVTTL
+Voltage         : 
+I/O Type        : Column I/O
+User Assignment : Y
+Bus Hold        : no
+Weak Pull Up    : Off
+
+Location        : 54
+Pad Number      : 
+I/O Bank        : 4
+Pin Name/Usage  : VCCIO4
+Dir.            : power
+I/O Standard    : 
+Voltage         : 3.3V
+I/O Type        : --
+User Assignment : 
+Bus Hold        : --
+Weak Pull Up    : --
+
+Location        : 55
+Pad Number      : 58
+I/O Bank        : 4
+Pin Name/Usage  : seg[1]
+Dir.            : output
+I/O Standard    : 3.3-V LVTTL
+Voltage         : 
+I/O Type        : Column I/O
+User Assignment : Y
+Bus Hold        : no
+Weak Pull Up    : Off
+
+Location        : 56
+Pad Number      : 
+I/O Bank        : 
+Pin Name/Usage  : GND
+Dir.            : gnd
+I/O Standard    : 
+Voltage         : 
+I/O Type        : --
+User Assignment : 
+Bus Hold        : --
+Weak Pull Up    : --
+
+Location        : 57
+Pad Number      : 59
+I/O Bank        : 4
+Pin Name/Usage  : seg[2]
+Dir.            : output
+I/O Standard    : 3.3-V LVTTL
+Voltage         : 
+I/O Type        : Column I/O
+User Assignment : Y
+Bus Hold        : no
+Weak Pull Up    : Off
+
+Location        : 58
+Pad Number      : 60
+I/O Bank        : 4
+Pin Name/Usage  : seg[3]
+Dir.            : output
+I/O Standard    : 3.3-V LVTTL
+Voltage         : 
+I/O Type        : Column I/O
+User Assignment : Y
+Bus Hold        : no
+Weak Pull Up    : Off
+
+Location        : 59
+Pad Number      : 63
+I/O Bank        : 4
+Pin Name/Usage  : seg[4]
+Dir.            : output
+I/O Standard    : 3.3-V LVTTL
+Voltage         : 
+I/O Type        : Column I/O
+User Assignment : Y
+Bus Hold        : no
+Weak Pull Up    : Off
+
+Location        : 60
+Pad Number      : 64
+I/O Bank        : 4
+Pin Name/Usage  : seg[5]
+Dir.            : output
+I/O Standard    : 3.3-V LVTTL
+Voltage         : 
+I/O Type        : Column I/O
+User Assignment : Y
+Bus Hold        : no
+Weak Pull Up    : Off
+
+Location        : 61
+Pad Number      : 
+I/O Bank        : 
+Pin Name/Usage  : GND
+Dir.            : gnd
+I/O Standard    : 
+Voltage         : 
+I/O Type        : --
+User Assignment : 
+Bus Hold        : --
+Weak Pull Up    : --
+
+Location        : 62
+Pad Number      : 
+I/O Bank        : 
+Pin Name/Usage  : VCCINT
+Dir.            : power
+I/O Standard    : 
+Voltage         : 1.2V
+I/O Type        : --
+User Assignment : 
+Bus Hold        : --
+Weak Pull Up    : --
+
+Location        : 63
+Pad Number      : 72
+I/O Bank        : 4
+Pin Name/Usage  : seg[6]
+Dir.            : output
+I/O Standard    : 3.3-V LVTTL
+Voltage         : 
+I/O Type        : Column I/O
+User Assignment : Y
+Bus Hold        : no
+Weak Pull Up    : Off
+
+Location        : 64
+Pad Number      : 75
+I/O Bank        : 4
+Pin Name/Usage  : seg[7]
+Dir.            : output
+I/O Standard    : 3.3-V LVTTL
+Voltage         : 
+I/O Type        : Column I/O
+User Assignment : Y
+Bus Hold        : no
+Weak Pull Up    : Off
+
+Location        : 65
+Pad Number      : 76
+I/O Bank        : 4
+Pin Name/Usage  : dig[3]
+Dir.            : output
+I/O Standard    : 3.3-V LVTTL
+Voltage         : 
+I/O Type        : Column I/O
+User Assignment : Y
+Bus Hold        : no
+Weak Pull Up    : Off
+
+Location        : 66
+Pad Number      : 
+I/O Bank        : 4
+Pin Name/Usage  : VCCIO4
+Dir.            : power
+I/O Standard    : 
+Voltage         : 3.3V
+I/O Type        : --
+User Assignment : 
+Bus Hold        : --
+Weak Pull Up    : --
+
+Location        : 67
+Pad Number      : 79
+I/O Bank        : 4
+Pin Name/Usage  : dig[2]
+Dir.            : output
+I/O Standard    : 3.3-V LVTTL
+Voltage         : 
+I/O Type        : Column I/O
+User Assignment : Y
+Bus Hold        : no
+Weak Pull Up    : Off
+
+Location        : 68
+Pad Number      : 
+I/O Bank        : 
+Pin Name/Usage  : GND
+Dir.            : gnd
+I/O Standard    : 
+Voltage         : 
+I/O Type        : --
+User Assignment : 
+Bus Hold        : --
+Weak Pull Up    : --
+
+Location        : 69
+Pad Number      : 80
+I/O Bank        : 4
+Pin Name/Usage  : dig[1]
+Dir.            : output
+I/O Standard    : 3.3-V LVTTL
+Voltage         : 
+I/O Type        : Column I/O
+User Assignment : Y
+Bus Hold        : no
+Weak Pull Up    : Off
+
+Location        : 70
+Pad Number      : 81
+I/O Bank        : 4
+Pin Name/Usage  : dig[0]
+Dir.            : output
+I/O Standard    : 3.3-V LVTTL
+Voltage         : 
+I/O Type        : Column I/O
+User Assignment : Y
+Bus Hold        : no
+Weak Pull Up    : Off
+
+Location        : 71
+Pad Number      : 82
+I/O Bank        : 4
+Pin Name/Usage  : led
+Dir.            : output
+I/O Standard    : 3.3-V LVTTL
+Voltage         : 
+I/O Type        : Column I/O
+User Assignment : Y
+Bus Hold        : no
+Weak Pull Up    : Off
+
+Location        : 72
+Pad Number      : 83
+I/O Bank        : 4
+Pin Name/Usage  : RESERVED_INPUT
+Dir.            : 
+I/O Standard    : 
+Voltage         : 
+I/O Type        : Column I/O
+User Assignment : 
+Bus Hold        : no
+Weak Pull Up    : Off
+
+Location        : 73
+Pad Number      : 84
+I/O Bank        : 3
+Pin Name/Usage  : RESERVED_INPUT
+Dir.            : 
+I/O Standard    : 
+Voltage         : 
+I/O Type        : Row I/O
+User Assignment : 
+Bus Hold        : no
+Weak Pull Up    : Off
+
+Location        : 74
+Pad Number      : 85
+I/O Bank        : 3
+Pin Name/Usage  : RESERVED_INPUT
+Dir.            : 
+I/O Standard    : 
+Voltage         : 
+I/O Type        : Row I/O
+User Assignment : 
+Bus Hold        : no
+Weak Pull Up    : Off
+
+Location        : 75
+Pad Number      : 86
+I/O Bank        : 3
+Pin Name/Usage  : RESERVED_INPUT
+Dir.            : 
+I/O Standard    : 
+Voltage         : 
+I/O Type        : Row I/O
+User Assignment : 
+Bus Hold        : no
+Weak Pull Up    : Off
+
+Location        : 76
+Pad Number      : 87
+I/O Bank        : 3
+Pin Name/Usage  : ~LVDS41p/nCEO~
+Dir.            : output
+I/O Standard    : 3.3-V LVTTL
+Voltage         : 
+I/O Type        : Row I/O
+User Assignment : N
+Bus Hold        : no
+Weak Pull Up    : Off
+
+Location        : 77
+Pad Number      : 
+I/O Bank        : 3
+Pin Name/Usage  : VCCIO3
+Dir.            : power
+I/O Standard    : 
+Voltage         : 3.3V
+I/O Type        : --
+User Assignment : 
+Bus Hold        : --
+Weak Pull Up    : --
+
+Location        : 78
+Pad Number      : 
+I/O Bank        : 
+Pin Name/Usage  : GND
+Dir.            : gnd
+I/O Standard    : 
+Voltage         : 
+I/O Type        : --
+User Assignment : 
+Bus Hold        : --
+Weak Pull Up    : --
+
+Location        : 79
+Pad Number      : 95
+I/O Bank        : 3
+Pin Name/Usage  : RESERVED_INPUT
+Dir.            : 
+I/O Standard    : 
+Voltage         : 
+I/O Type        : Row I/O
+User Assignment : 
+Bus Hold        : --
+Weak Pull Up    : --
+
+Location        : 80
+Pad Number      : 97
+I/O Bank        : 3
+Pin Name/Usage  : RESERVED_INPUT
+Dir.            : 
+I/O Standard    : 
+Voltage         : 
+I/O Type        : Row I/O
+User Assignment : 
+Bus Hold        : no
+Weak Pull Up    : Off
+
+Location        : 81
+Pad Number      : 98
+I/O Bank        : 3
+Pin Name/Usage  : RESERVED_INPUT
+Dir.            : 
+I/O Standard    : 
+Voltage         : 
+I/O Type        : Row I/O
+User Assignment : 
+Bus Hold        : no
+Weak Pull Up    : Off
+
+Location        : 82
+Pad Number      : 99
+I/O Bank        : 3
+Pin Name/Usage  : ^nSTATUS
+Dir.            : 
+I/O Standard    : 
+Voltage         : 
+I/O Type        : --
+User Assignment : 
+Bus Hold        : --
+Weak Pull Up    : --
+
+Location        : 83
+Pad Number      : 100
+I/O Bank        : 3
+Pin Name/Usage  : ^CONF_DONE
+Dir.            : 
+I/O Standard    : 
+Voltage         : 
+I/O Type        : --
+User Assignment : 
+Bus Hold        : --
+Weak Pull Up    : --
+
+Location        : 84
+Pad Number      : 101
+I/O Bank        : 3
+Pin Name/Usage  : ^MSEL1
+Dir.            : 
+I/O Standard    : 
+Voltage         : 
+I/O Type        : --
+User Assignment : 
+Bus Hold        : --
+Weak Pull Up    : --
+
+Location        : 85
+Pad Number      : 102
+I/O Bank        : 3
+Pin Name/Usage  : ^MSEL0
+Dir.            : 
+I/O Standard    : 
+Voltage         : 
+I/O Type        : --
+User Assignment : 
+Bus Hold        : --
+Weak Pull Up    : --
+
+Location        : 86
+Pad Number      : 103
+I/O Bank        : 3
+Pin Name/Usage  : RESERVED_INPUT
+Dir.            : 
+I/O Standard    : 
+Voltage         : 
+I/O Type        : Row I/O
+User Assignment : 
+Bus Hold        : no
+Weak Pull Up    : Off
+
+Location        : 87
+Pad Number      : 104
+I/O Bank        : 3
+Pin Name/Usage  : RESERVED_INPUT
+Dir.            : 
+I/O Standard    : 
+Voltage         : 
+I/O Type        : Row I/O
+User Assignment : 
+Bus Hold        : no
+Weak Pull Up    : Off
+
+Location        : 88
+Pad Number      : 105
+I/O Bank        : 3
+Pin Name/Usage  : key1
+Dir.            : input
+I/O Standard    : 3.3-V LVTTL
+Voltage         : 
+I/O Type        : Row I/O
+User Assignment : Y
+Bus Hold        : no
+Weak Pull Up    : Off
+
+Location        : 89
+Pad Number      : 106
+I/O Bank        : 3
+Pin Name/Usage  : GND+
+Dir.            : 
+I/O Standard    : 
+Voltage         : 
+I/O Type        : Row I/O
+User Assignment : 
+Bus Hold        : --
+Weak Pull Up    : --
+
+Location        : 90
+Pad Number      : 107
+I/O Bank        : 3
+Pin Name/Usage  : rst
+Dir.            : input
+I/O Standard    : 3.3-V LVTTL
+Voltage         : 
+I/O Type        : Row I/O
+User Assignment : Y
+Bus Hold        : no
+Weak Pull Up    : Off
+
+Location        : 91
+Pad Number      : 108
+I/O Bank        : 3
+Pin Name/Usage  : GND+
+Dir.            : 
+I/O Standard    : 
+Voltage         : 
+I/O Type        : Row I/O
+User Assignment : 
+Bus Hold        : --
+Weak Pull Up    : --
+
+Location        : 92
+Pad Number      : 109
+I/O Bank        : 3
+Pin Name/Usage  : RESERVED_INPUT
+Dir.            : 
+I/O Standard    : 
+Voltage         : 
+I/O Type        : Row I/O
+User Assignment : 
+Bus Hold        : no
+Weak Pull Up    : Off
+
+Location        : 93
+Pad Number      : 110
+I/O Bank        : 3
+Pin Name/Usage  : RESERVED_INPUT
+Dir.            : 
+I/O Standard    : 
+Voltage         : 
+I/O Type        : Row I/O
+User Assignment : 
+Bus Hold        : no
+Weak Pull Up    : Off
+
+Location        : 94
+Pad Number      : 111
+I/O Bank        : 3
+Pin Name/Usage  : RESERVED_INPUT
+Dir.            : 
+I/O Standard    : 
+Voltage         : 
+I/O Type        : Row I/O
+User Assignment : 
+Bus Hold        : no
+Weak Pull Up    : Off
+
+Location        : 95
+Pad Number      : 
+I/O Bank        : 3
+Pin Name/Usage  : VCCIO3
+Dir.            : power
+I/O Standard    : 
+Voltage         : 3.3V
+I/O Type        : --
+User Assignment : 
+Bus Hold        : --
+Weak Pull Up    : --
+
+Location        : 96
+Pad Number      : 112
+I/O Bank        : 3
+Pin Name/Usage  : RESERVED_INPUT
+Dir.            : 
+I/O Standard    : 
+Voltage         : 
+I/O Type        : Row I/O
+User Assignment : 
+Bus Hold        : no
+Weak Pull Up    : Off
+
+Location        : 97
+Pad Number      : 113
+I/O Bank        : 3
+Pin Name/Usage  : RESERVED_INPUT
+Dir.            : 
+I/O Standard    : 
+Voltage         : 
+I/O Type        : Row I/O
+User Assignment : 
+Bus Hold        : no
+Weak Pull Up    : Off
+
+Location        : 98
+Pad Number      : 
+I/O Bank        : 
+Pin Name/Usage  : GND
+Dir.            : gnd
+I/O Standard    : 
+Voltage         : 
+I/O Type        : --
+User Assignment : 
+Bus Hold        : --
+Weak Pull Up    : --
+
+Location        : 99
+Pad Number      : 119
+I/O Bank        : 3
+Pin Name/Usage  : RESERVED_INPUT
+Dir.            : 
+I/O Standard    : 
+Voltage         : 
+I/O Type        : Row I/O
+User Assignment : 
+Bus Hold        : --
+Weak Pull Up    : --
+
+Location        : 100
+Pad Number      : 120
+I/O Bank        : 3
+Pin Name/Usage  : RESERVED_INPUT
+Dir.            : 
+I/O Standard    : 
+Voltage         : 
+I/O Type        : Row I/O
+User Assignment : 
+Bus Hold        : no
+Weak Pull Up    : Off
+
+Location        : 101
+Pad Number      : 121
+I/O Bank        : 3
+Pin Name/Usage  : RESERVED_INPUT
+Dir.            : 
+I/O Standard    : 
+Voltage         : 
+I/O Type        : Row I/O
+User Assignment : 
+Bus Hold        : no
+Weak Pull Up    : Off
+
+Location        : 102
+Pad Number      : 
+I/O Bank        : 3
+Pin Name/Usage  : VCCIO3
+Dir.            : power
+I/O Standard    : 
+Voltage         : 3.3V
+I/O Type        : --
+User Assignment : 
+Bus Hold        : --
+Weak Pull Up    : --
+
+Location        : 103
+Pad Number      : 125
+I/O Bank        : 3
+Pin Name/Usage  : RESERVED_INPUT
+Dir.            : 
+I/O Standard    : 
+Voltage         : 
+I/O Type        : Row I/O
+User Assignment : 
+Bus Hold        : no
+Weak Pull Up    : Off
+
+Location        : 104
+Pad Number      : 126
+I/O Bank        : 3
+Pin Name/Usage  : RESERVED_INPUT
+Dir.            : 
+I/O Standard    : 
+Voltage         : 
+I/O Type        : Row I/O
+User Assignment : 
+Bus Hold        : no
+Weak Pull Up    : Off
+
+Location        : 105
+Pad Number      : 
+I/O Bank        : 
+Pin Name/Usage  : GND
+Dir.            : gnd
+I/O Standard    : 
+Voltage         : 
+I/O Type        : --
+User Assignment : 
+Bus Hold        : --
+Weak Pull Up    : --
+
+Location        : 106
+Pad Number      : 
+I/O Bank        : 
+Pin Name/Usage  : GND_PLL2
+Dir.            : gnd
+I/O Standard    : 
+Voltage         : 
+I/O Type        : --
+User Assignment : 
+Bus Hold        : --
+Weak Pull Up    : --
+
+Location        : 107
+Pad Number      : 
+I/O Bank        : 
+Pin Name/Usage  : VCCD_PLL2
+Dir.            : power
+I/O Standard    : 
+Voltage         : 1.2V
+I/O Type        : --
+User Assignment : 
+Bus Hold        : --
+Weak Pull Up    : --
+
+Location        : 108
+Pad Number      : 
+I/O Bank        : 
+Pin Name/Usage  : GND_PLL2
+Dir.            : gnd
+I/O Standard    : 
+Voltage         : 
+I/O Type        : --
+User Assignment : 
+Bus Hold        : --
+Weak Pull Up    : --
+
+Location        : 109
+Pad Number      : 
+I/O Bank        : 
+Pin Name/Usage  : VCCA_PLL2
+Dir.            : power
+I/O Standard    : 
+Voltage         : 1.2V
+I/O Type        : --
+User Assignment : 
+Bus Hold        : --
+Weak Pull Up    : --
+
+Location        : 110
+Pad Number      : 
+I/O Bank        : 
+Pin Name/Usage  : GNDA_PLL2
+Dir.            : gnd
+I/O Standard    : 
+Voltage         : 
+I/O Type        : --
+User Assignment : 
+Bus Hold        : --
+Weak Pull Up    : --
+
+Location        : 111
+Pad Number      : 
+I/O Bank        : 
+Pin Name/Usage  : GND
+Dir.            : gnd
+I/O Standard    : 
+Voltage         : 
+I/O Type        : --
+User Assignment : 
+Bus Hold        : --
+Weak Pull Up    : --
+
+Location        : 112
+Pad Number      : 127
+I/O Bank        : 2
+Pin Name/Usage  : RESERVED_INPUT
+Dir.            : 
+I/O Standard    : 
+Voltage         : 
+I/O Type        : Column I/O
+User Assignment : 
+Bus Hold        : no
+Weak Pull Up    : Off
+
+Location        : 113
+Pad Number      : 128
+I/O Bank        : 2
+Pin Name/Usage  : RESERVED_INPUT
+Dir.            : 
+I/O Standard    : 
+Voltage         : 
+I/O Type        : Column I/O
+User Assignment : 
+Bus Hold        : no
+Weak Pull Up    : Off
+
+Location        : 114
+Pad Number      : 129
+I/O Bank        : 2
+Pin Name/Usage  : RESERVED_INPUT
+Dir.            : 
+I/O Standard    : 
+Voltage         : 
+I/O Type        : Column I/O
+User Assignment : 
+Bus Hold        : no
+Weak Pull Up    : Off
+
+Location        : 115
+Pad Number      : 130
+I/O Bank        : 2
+Pin Name/Usage  : RESERVED_INPUT
+Dir.            : 
+I/O Standard    : 
+Voltage         : 
+I/O Type        : Column I/O
+User Assignment : 
+Bus Hold        : no
+Weak Pull Up    : Off
+
+Location        : 116
+Pad Number      : 
+I/O Bank        : 2
+Pin Name/Usage  : VCCIO2
+Dir.            : power
+I/O Standard    : 
+Voltage         : 3.3V
+I/O Type        : --
+User Assignment : 
+Bus Hold        : --
+Weak Pull Up    : --
+
+Location        : 117
+Pad Number      : 
+I/O Bank        : 
+Pin Name/Usage  : GND
+Dir.            : gnd
+I/O Standard    : 
+Voltage         : 
+I/O Type        : --
+User Assignment : 
+Bus Hold        : --
+Weak Pull Up    : --
+
+Location        : 118
+Pad Number      : 134
+I/O Bank        : 2
+Pin Name/Usage  : RESERVED_INPUT
+Dir.            : 
+I/O Standard    : 
+Voltage         : 
+I/O Type        : Column I/O
+User Assignment : 
+Bus Hold        : no
+Weak Pull Up    : Off
+
+Location        : 119
+Pad Number      : 135
+I/O Bank        : 2
+Pin Name/Usage  : RESERVED_INPUT
+Dir.            : 
+I/O Standard    : 
+Voltage         : 
+I/O Type        : Column I/O
+User Assignment : 
+Bus Hold        : no
+Weak Pull Up    : Off
+
+Location        : 120
+Pad Number      : 137
+I/O Bank        : 2
+Pin Name/Usage  : RESERVED_INPUT
+Dir.            : 
+I/O Standard    : 
+Voltage         : 
+I/O Type        : Column I/O
+User Assignment : 
+Bus Hold        : --
+Weak Pull Up    : --
+
+Location        : 121
+Pad Number      : 138
+I/O Bank        : 2
+Pin Name/Usage  : RESERVED_INPUT
+Dir.            : 
+I/O Standard    : 
+Voltage         : 
+I/O Type        : Column I/O
+User Assignment : 
+Bus Hold        : no
+Weak Pull Up    : Off
+
+Location        : 122
+Pad Number      : 139
+I/O Bank        : 2
+Pin Name/Usage  : RESERVED_INPUT
+Dir.            : 
+I/O Standard    : 
+Voltage         : 
+I/O Type        : Column I/O
+User Assignment : 
+Bus Hold        : no
+Weak Pull Up    : Off
+
+Location        : 123
+Pad Number      : 
+I/O Bank        : 
+Pin Name/Usage  : GND
+Dir.            : gnd
+I/O Standard    : 
+Voltage         : 
+I/O Type        : --
+User Assignment : 
+Bus Hold        : --
+Weak Pull Up    : --
+
+Location        : 124
+Pad Number      : 
+I/O Bank        : 
+Pin Name/Usage  : VCCINT
+Dir.            : power
+I/O Standard    : 
+Voltage         : 1.2V
+I/O Type        : --
+User Assignment : 
+Bus Hold        : --
+Weak Pull Up    : --
+
+Location        : 125
+Pad Number      : 144
+I/O Bank        : 2
+Pin Name/Usage  : RESERVED_INPUT
+Dir.            : 
+I/O Standard    : 
+Voltage         : 
+I/O Type        : Column I/O
+User Assignment : 
+Bus Hold        : no
+Weak Pull Up    : Off
+
+Location        : 126
+Pad Number      : 145
+I/O Bank        : 2
+Pin Name/Usage  : RESERVED_INPUT
+Dir.            : 
+I/O Standard    : 
+Voltage         : 
+I/O Type        : Column I/O
+User Assignment : 
+Bus Hold        : no
+Weak Pull Up    : Off
+
+Location        : 127
+Pad Number      : 
+I/O Bank        : 2
+Pin Name/Usage  : VCCIO2
+Dir.            : power
+I/O Standard    : 
+Voltage         : 3.3V
+I/O Type        : --
+User Assignment : 
+Bus Hold        : --
+Weak Pull Up    : --
+
+Location        : 128
+Pad Number      : 
+I/O Bank        : 
+Pin Name/Usage  : GND
+Dir.            : gnd
+I/O Standard    : 
+Voltage         : 
+I/O Type        : --
+User Assignment : 
+Bus Hold        : --
+Weak Pull Up    : --
+
+Location        : 129
+Pad Number      : 148
+I/O Bank        : 2
+Pin Name/Usage  : RESERVED_INPUT
+Dir.            : 
+I/O Standard    : 
+Voltage         : 
+I/O Type        : Column I/O
+User Assignment : 
+Bus Hold        : no
+Weak Pull Up    : Off
+
+Location        : 130
+Pad Number      : 
+I/O Bank        : 
+Pin Name/Usage  : GND
+Dir.            : gnd
+I/O Standard    : 
+Voltage         : 
+I/O Type        : --
+User Assignment : 
+Bus Hold        : --
+Weak Pull Up    : --
+
+Location        : 131
+Pad Number      : 
+I/O Bank        : 
+Pin Name/Usage  : VCCINT
+Dir.            : power
+I/O Standard    : 
+Voltage         : 1.2V
+I/O Type        : --
+User Assignment : 
+Bus Hold        : --
+Weak Pull Up    : --
+
+Location        : 132
+Pad Number      : 153
+I/O Bank        : 2
+Pin Name/Usage  : RESERVED_INPUT
+Dir.            : 
+I/O Standard    : 
+Voltage         : 
+I/O Type        : Column I/O
+User Assignment : 
+Bus Hold        : --
+Weak Pull Up    : --
+
+Location        : 133
+Pad Number      : 154
+I/O Bank        : 2
+Pin Name/Usage  : RESERVED_INPUT
+Dir.            : 
+I/O Standard    : 
+Voltage         : 
+I/O Type        : Column I/O
+User Assignment : 
+Bus Hold        : no
+Weak Pull Up    : Off
+
+Location        : 134
+Pad Number      : 155
+I/O Bank        : 2
+Pin Name/Usage  : RESERVED_INPUT
+Dir.            : 
+I/O Standard    : 
+Voltage         : 
+I/O Type        : Column I/O
+User Assignment : 
+Bus Hold        : no
+Weak Pull Up    : Off
+
+Location        : 135
+Pad Number      : 162
+I/O Bank        : 2
+Pin Name/Usage  : RESERVED_INPUT
+Dir.            : 
+I/O Standard    : 
+Voltage         : 
+I/O Type        : Column I/O
+User Assignment : 
+Bus Hold        : no
+Weak Pull Up    : Off
+
+Location        : 136
+Pad Number      : 163
+I/O Bank        : 2
+Pin Name/Usage  : RESERVED_INPUT
+Dir.            : 
+I/O Standard    : 
+Voltage         : 
+I/O Type        : Column I/O
+User Assignment : 
+Bus Hold        : no
+Weak Pull Up    : Off
+
+Location        : 137
+Pad Number      : 164
+I/O Bank        : 2
+Pin Name/Usage  : RESERVED_INPUT
+Dir.            : 
+I/O Standard    : 
+Voltage         : 
+I/O Type        : Column I/O
+User Assignment : 
+Bus Hold        : no
+Weak Pull Up    : Off
+
+Location        : 138
+Pad Number      : 
+I/O Bank        : 2
+Pin Name/Usage  : VCCIO2
+Dir.            : power
+I/O Standard    : 
+Voltage         : 3.3V
+I/O Type        : --
+User Assignment : 
+Bus Hold        : --
+Weak Pull Up    : --
+
+Location        : 139
+Pad Number      : 165
+I/O Bank        : 2
+Pin Name/Usage  : RESERVED_INPUT
+Dir.            : 
+I/O Standard    : 
+Voltage         : 
+I/O Type        : Column I/O
+User Assignment : 
+Bus Hold        : no
+Weak Pull Up    : Off
+
+Location        : 140
+Pad Number      : 
+I/O Bank        : 
+Pin Name/Usage  : GND
+Dir.            : gnd
+I/O Standard    : 
+Voltage         : 
+I/O Type        : --
+User Assignment : 
+Bus Hold        : --
+Weak Pull Up    : --
+
+Location        : 141
+Pad Number      : 166
+I/O Bank        : 2
+Pin Name/Usage  : RESERVED_INPUT
+Dir.            : 
+I/O Standard    : 
+Voltage         : 
+I/O Type        : Column I/O
+User Assignment : 
+Bus Hold        : no
+Weak Pull Up    : Off
+
+Location        : 142
+Pad Number      : 167
+I/O Bank        : 2
+Pin Name/Usage  : RESERVED_INPUT
+Dir.            : 
+I/O Standard    : 
+Voltage         : 
+I/O Type        : Column I/O
+User Assignment : 
+Bus Hold        : no
+Weak Pull Up    : Off
+
+Location        : 143
+Pad Number      : 168
+I/O Bank        : 2
+Pin Name/Usage  : RESERVED_INPUT
+Dir.            : 
+I/O Standard    : 
+Voltage         : 
+I/O Type        : Column I/O
+User Assignment : 
+Bus Hold        : no
+Weak Pull Up    : Off
+
+Location        : 144
+Pad Number      : 169
+I/O Bank        : 2
+Pin Name/Usage  : RESERVED_INPUT
+Dir.            : 
+I/O Standard    : 
+Voltage         : 
+I/O Type        : Column I/O
+User Assignment : 
+Bus Hold        : no
+Weak Pull Up    : Off
++--------------------------------------------------------------------------------+
+
+Note: Pin directions (input, output or bidir) are based on device operating in user mode.
+
+
++--------------------------------------------------------------------------------+
+; Output Pin Default Load For Reported TCO                                       ;
++--------------------------------------------------------------------------------+
+I/O Standard           : 3.3-V LVTTL
+Load                   : 0 pF
+Termination Resistance : Not Available
+
+I/O Standard           : 3.3-V LVCMOS
+Load                   : 0 pF
+Termination Resistance : Not Available
+
+I/O Standard           : 2.5 V
+Load                   : 0 pF
+Termination Resistance : Not Available
+
+I/O Standard           : 1.8 V
+Load                   : 0 pF
+Termination Resistance : Not Available
+
+I/O Standard           : 1.5 V
+Load                   : 0 pF
+Termination Resistance : Not Available
+
+I/O Standard           : 3.3-V PCI
+Load                   : 10 pF
+Termination Resistance : 25 Ohm (Parallel)
+
+I/O Standard           : 3.3-V PCI-X
+Load                   : 10 pF
+Termination Resistance : 25 Ohm (Parallel)
+
+I/O Standard           : SSTL-2 Class I
+Load                   : 0 pF
+Termination Resistance : 50 Ohm (Parallel), 25 Ohm (Serial)
+
+I/O Standard           : SSTL-2 Class II
+Load                   : 0 pF
+Termination Resistance : 25 Ohm (Parallel), 25 Ohm (Serial)
+
+I/O Standard           : SSTL-18 Class I
+Load                   : 0 pF
+Termination Resistance : 50 Ohm (Parallel), 25 Ohm (Serial)
+
+I/O Standard           : SSTL-18 Class II
+Load                   : 0 pF
+Termination Resistance : 25 Ohm (Parallel), 25 Ohm (Serial)
+
+I/O Standard           : 1.5-V HSTL Class I
+Load                   : 0 pF
+Termination Resistance : 50 Ohm (Parallel)
+
+I/O Standard           : 1.5-V HSTL Class II
+Load                   : 0 pF
+Termination Resistance : 25 Ohm (Parallel)
+
+I/O Standard           : 1.8-V HSTL Class I
+Load                   : 0 pF
+Termination Resistance : 50 Ohm (Parallel)
+
+I/O Standard           : 1.8-V HSTL Class II
+Load                   : 0 pF
+Termination Resistance : 25 Ohm (Parallel)
+
+I/O Standard           : Differential SSTL-2
+Load                   : 0 pF
+Termination Resistance : (See SSTL-2)
+
+I/O Standard           : Differential 2.5-V SSTL Class II
+Load                   : 0 pF
+Termination Resistance : (See SSTL-2 Class II)
+
+I/O Standard           : Differential 1.8-V SSTL Class I
+Load                   : 0 pF
+Termination Resistance : (See 1.8-V SSTL Class I)
+
+I/O Standard           : Differential 1.8-V SSTL Class II
+Load                   : 0 pF
+Termination Resistance : (See 1.8-V SSTL Class II)
+
+I/O Standard           : Differential 1.5-V HSTL Class I
+Load                   : 0 pF
+Termination Resistance : (See 1.5-V HSTL Class I)
+
+I/O Standard           : Differential 1.5-V HSTL Class II
+Load                   : 0 pF
+Termination Resistance : (See 1.5-V HSTL Class II)
+
+I/O Standard           : Differential 1.8-V HSTL Class I
+Load                   : 0 pF
+Termination Resistance : (See 1.8-V HSTL Class I)
+
+I/O Standard           : Differential 1.8-V HSTL Class II
+Load                   : 0 pF
+Termination Resistance : (See 1.8-V HSTL Class II)
+
+I/O Standard           : LVDS
+Load                   : 0 pF
+Termination Resistance : 100 Ohm (Differential)
+
+I/O Standard           : mini-LVDS
+Load                   : 0 pF
+Termination Resistance : 100 Ohm (Differential)
+
+I/O Standard           : RSDS
+Load                   : 0 pF
+Termination Resistance : 100 Ohm (Differential)
+
+I/O Standard           : Simple RSDS
+Load                   : 0 pF
+Termination Resistance : Not Available
+
+I/O Standard           : Differential LVPECL
+Load                   : 0 pF
+Termination Resistance : 100 Ohm (Differential)
++--------------------------------------------------------------------------------+
+
+Note: User assignments will override these defaults. The user specified values are listed in the Output Pins and Bidir Pins tables.
+
+
++--------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                          ;
++--------------------------------------------------------------------------------+
+Compilation Hierarchy Node : |keyseg7scan
+Logic Cells                : 112 (112)
+Dedicated Logic Registers  : 63 (63)
+I/O Registers              : 0 (0)
+Memory Bits                : 0
+M4Ks                       : 0
+DSP Elements               : 0
+DSP 9x9                    : 0
+DSP 18x18                  : 0
+Pins                       : 16
+Virtual Pins               : 0
+LUT-Only LCs               : 49 (49)
+Register-Only LCs          : 2 (2)
+LUT/Register LCs           : 61 (61)
+Full Hierarchy Name        : |keyseg7scan
+Library Name               : work
++--------------------------------------------------------------------------------+
+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------------------------+
+; Delay Chain Summary                                                            ;
++--------------------------------------------------------------------------------+
+Name                  : led
+Pin Type              : Output
+Pad to Core 0         : --
+Pad to Core 1         : --
+Pad to Input Register : --
+TCO                   : --
+
+Name                  : seg[0]
+Pin Type              : Output
+Pad to Core 0         : --
+Pad to Core 1         : --
+Pad to Input Register : --
+TCO                   : --
+
+Name                  : seg[1]
+Pin Type              : Output
+Pad to Core 0         : --
+Pad to Core 1         : --
+Pad to Input Register : --
+TCO                   : --
+
+Name                  : seg[2]
+Pin Type              : Output
+Pad to Core 0         : --
+Pad to Core 1         : --
+Pad to Input Register : --
+TCO                   : --
+
+Name                  : seg[3]
+Pin Type              : Output
+Pad to Core 0         : --
+Pad to Core 1         : --
+Pad to Input Register : --
+TCO                   : --
+
+Name                  : seg[4]
+Pin Type              : Output
+Pad to Core 0         : --
+Pad to Core 1         : --
+Pad to Input Register : --
+TCO                   : --
+
+Name                  : seg[5]
+Pin Type              : Output
+Pad to Core 0         : --
+Pad to Core 1         : --
+Pad to Input Register : --
+TCO                   : --
+
+Name                  : seg[6]
+Pin Type              : Output
+Pad to Core 0         : --
+Pad to Core 1         : --
+Pad to Input Register : --
+TCO                   : --
+
+Name                  : seg[7]
+Pin Type              : Output
+Pad to Core 0         : --
+Pad to Core 1         : --
+Pad to Input Register : --
+TCO                   : --
+
+Name                  : dig[0]
+Pin Type              : Output
+Pad to Core 0         : --
+Pad to Core 1         : --
+Pad to Input Register : --
+TCO                   : --
+
+Name                  : dig[1]
+Pin Type              : Output
+Pad to Core 0         : --
+Pad to Core 1         : --
+Pad to Input Register : --
+TCO                   : --
+
+Name                  : dig[2]
+Pin Type              : Output
+Pad to Core 0         : --
+Pad to Core 1         : --
+Pad to Input Register : --
+TCO                   : --
+
+Name                  : dig[3]
+Pin Type              : Output
+Pad to Core 0         : --
+Pad to Core 1         : --
+Pad to Input Register : --
+TCO                   : --
+
+Name                  : rst
+Pin Type              : Input
+Pad to Core 0         : (0) 171 ps
+Pad to Core 1         : (0) 171 ps
+Pad to Input Register : --
+TCO                   : --
+
+Name                  : clk
+Pin Type              : Input
+Pad to Core 0         : (0) 171 ps
+Pad to Core 1         : (0) 171 ps
+Pad to Input Register : --
+TCO                   : --
+
+Name                  : key1
+Pin Type              : Input
+Pad to Core 0         : (0) 171 ps
+Pad to Core 1         : (0) 171 ps
+Pad to Input Register : --
+TCO                   : --
++--------------------------------------------------------------------------------+
+
+
+
++--------------------------------------------------------------------------------+
+; Pad To Core Delay Chain Fanout                                                 ;
++--------------------------------------------------------------------------------+
+Source Pin / Fanout : rst
+Pad To Core Index   :  
+Setting             :  
+
+Source Pin / Fanout : clk
+Pad To Core Index   :  
+Setting             :  
+
+Source Pin / Fanout : key1
+Pad To Core Index   :  
+Setting             :  
++--------------------------------------------------------------------------------+
+
+
+
++--------------------------------------------------------------------------------+
+; Control Signals                                                                ;
++--------------------------------------------------------------------------------+
+Name                      : clk
+Location                  : PIN_17
+Fan-Out                   : 61
+Usage                     : Clock
+Global                    : yes
+Global Resource Used      : Global Clock
+Global Line Name          : GCLK2
+Enable Signal Source Name : --
+
+Name                      : divclk
+Location                  : LCFF_X27_Y3_N23
+Fan-Out                   : 2
+Usage                     : Clock
+Global                    : yes
+Global Resource Used      : Global Clock
+Global Line Name          : GCLK5
+Enable Signal Source Name : --
+
+Name                      : key1
+Location                  : PIN_88
+Fan-Out                   : 31
+Usage                     : Clock enable, Sync. clear
+Global                    : no
+Global Resource Used      : --
+Global Line Name          : --
+Enable Signal Source Name : --
+
+Name                      : key1cnt[20]~50
+Location                  : LCCOMB_X25_Y4_N6
+Fan-Out                   : 29
+Usage                     : Clock enable
+Global                    : no
+Global Resource Used      : --
+Global Line Name          : --
+Enable Signal Source Name : --
+
+Name                      : num[3]~1
+Location                  : LCCOMB_X18_Y1_N20
+Fan-Out                   : 4
+Usage                     : Clock enable
+Global                    : no
+Global Resource Used      : --
+Global Line Name          : --
+Enable Signal Source Name : --
+
+Name                      : rst
+Location                  : PIN_90
+Fan-Out                   : 2
+Usage                     : Async. clear
+Global                    : yes
+Global Resource Used      : Global Clock
+Global Line Name          : GCLK6
+Enable Signal Source Name : --
++--------------------------------------------------------------------------------+
+
+
+
++--------------------------------------------------------------------------------+
+; Global & Other Fast Signals                                                    ;
++--------------------------------------------------------------------------------+
+Name                      : clk
+Location                  : PIN_17
+Fan-Out                   : 61
+Global Resource Used      : Global Clock
+Global Line Name          : GCLK2
+Enable Signal Source Name : --
+
+Name                      : divclk
+Location                  : LCFF_X27_Y3_N23
+Fan-Out                   : 2
+Global Resource Used      : Global Clock
+Global Line Name          : GCLK5
+Enable Signal Source Name : --
+
+Name                      : rst
+Location                  : PIN_90
+Fan-Out                   : 2
+Global Resource Used      : Global Clock
+Global Line Name          : GCLK6
+Enable Signal Source Name : --
++--------------------------------------------------------------------------------+
+
+
+
++---------------------------------+
+; Non-Global High Fan-Out Signals ;
++----------------+----------------+
+; Name           ; Fan-Out        ;
++----------------+----------------+
+; key1           ; 31             ;
+; key1cnt[20]~50 ; 29             ;
+; scan[0]        ; 10             ;
+; scan[1]        ; 9              ;
+; Equal0~7       ; 8              ;
+; Equal0~4       ; 8              ;
+; Mux5~0         ; 7              ;
+; Mux6~0         ; 7              ;
+; Mux7~0         ; 7              ;
+; num[0]         ; 6              ;
+; rst            ; 5              ;
+; num[1]         ; 5              ;
+; num[3]~1       ; 4              ;
+; Mux4~0         ; 4              ;
+; num[2]         ; 4              ;
+; num[3]~2       ; 3              ;
+; num[3]         ; 3              ;
+; key1cnt[28]    ; 3              ;
+; key1cnt[7]     ; 3              ;
+; key1cnt[6]     ; 3              ;
+; key1cnt[5]     ; 3              ;
+; key1cnt[4]     ; 3              ;
+; key1cnt[3]     ; 3              ;
+; key1cnt[2]     ; 3              ;
+; key1cnt[1]     ; 3              ;
+; key1cnt[0]     ; 3              ;
+; Equal3~5       ; 2              ;
+; Equal3~4       ; 2              ;
+; \a:count[25]   ; 2              ;
+; \a:count[24]   ; 2              ;
+; \a:count[23]   ; 2              ;
+; \a:count[22]   ; 2              ;
+; \a:count[21]   ; 2              ;
+; \a:count[20]   ; 2              ;
+; \a:count[19]   ; 2              ;
+; \a:count[18]   ; 2              ;
+; \a:count[17]   ; 2              ;
+; \a:count[16]   ; 2              ;
+; \a:count[13]   ; 2              ;
+; \a:count[15]   ; 2              ;
+; \a:count[14]   ; 2              ;
+; \a:count[12]   ; 2              ;
+; \a:count[11]   ; 2              ;
+; \a:count[10]   ; 2              ;
+; \a:count[9]    ; 2              ;
+; \a:count[8]    ; 2              ;
+; \a:count[6]    ; 2              ;
+; \a:count[5]    ; 2              ;
+; \a:count[4]    ; 2              ;
+; \a:count[7]    ; 2              ;
+; \a:count[3]    ; 2              ;
+; \a:count[2]    ; 2              ;
+; \a:count[1]    ; 2              ;
+; \a:count[0]    ; 2              ;
+; key1cnt[26]    ; 2              ;
+; key1cnt[25]    ; 2              ;
+; key1cnt[24]    ; 2              ;
+; key1cnt[27]    ; 2              ;
+; key1cnt[23]    ; 2              ;
+; key1cnt[22]    ; 2              ;
+; key1cnt[21]    ; 2              ;
+; key1cnt[20]    ; 2              ;
+; key1cnt[19]    ; 2              ;
+; key1cnt[18]    ; 2              ;
+; key1cnt[17]    ; 2              ;
+; key1cnt[16]    ; 2              ;
+; key1cnt[13]    ; 2              ;
+; key1cnt[15]    ; 2              ;
+; key1cnt[14]    ; 2              ;
+; key1cnt[12]    ; 2              ;
+; key1cnt[11]    ; 2              ;
+; key1cnt[10]    ; 2              ;
+; key1cnt[9]     ; 2              ;
+; key1cnt[8]     ; 2              ;
+; scan[0]~1      ; 1              ;
+; key1cnt[20]~49 ; 1              ;
+; key1cnt[20]~48 ; 1              ;
+; key1cnt[20]~47 ; 1              ;
+; count~6        ; 1              ;
+; count~5        ; 1              ;
+; count~4        ; 1              ;
+; count~3        ; 1              ;
+; count~2        ; 1              ;
+; count~1        ; 1              ;
+; count~0        ; 1              ;
+; Equal3~9       ; 1              ;
+; Equal3~8       ; 1              ;
+; Equal3~7       ; 1              ;
+; Equal3~6       ; 1              ;
+; Equal3~3       ; 1              ;
+; Equal3~2       ; 1              ;
+; Equal3~1       ; 1              ;
+; Equal3~0       ; 1              ;
+; Equal0~8       ; 1              ;
+; Equal0~6       ; 1              ;
+; Equal0~5       ; 1              ;
+; Equal0~3       ; 1              ;
+; Equal0~2       ; 1              ;
+; Equal0~1       ; 1              ;
+; Equal0~0       ; 1              ;
+; num~5          ; 1              ;
+; Add2~1         ; 1              ;
+; num~4          ; 1              ;
+; Add2~0         ; 1              ;
+; num~3          ; 1              ;
+; key1filt       ; 1              ;
+; num~0          ; 1              ;
+; scan[1]~0      ; 1              ;
+; Mux6~1         ; 1              ;
+; Mux1~0         ; 1              ;
+; Mux2~0         ; 1              ;
+; Mux5~1         ; 1              ;
+; Mux8~0         ; 1              ;
+; Mux9~0         ; 1              ;
+; Mux10~0        ; 1              ;
+; Mux11~0        ; 1              ;
+; Mux12~0        ; 1              ;
+; Mux13~0        ; 1              ;
+; Mux14~0        ; 1              ;
+; key1cnt[28]~89 ; 1              ;
+; key1cnt[27]~88 ; 1              ;
+; key1cnt[27]~87 ; 1              ;
+; key1cnt[26]~86 ; 1              ;
+; key1cnt[26]~85 ; 1              ;
+; key1cnt[25]~84 ; 1              ;
+; key1cnt[25]~83 ; 1              ;
+; key1cnt[24]~82 ; 1              ;
+; key1cnt[24]~81 ; 1              ;
+; key1cnt[23]~80 ; 1              ;
+; key1cnt[23]~79 ; 1              ;
+; key1cnt[22]~78 ; 1              ;
+; key1cnt[22]~77 ; 1              ;
+; key1cnt[21]~76 ; 1              ;
+; key1cnt[21]~75 ; 1              ;
+; key1cnt[20]~74 ; 1              ;
+; key1cnt[20]~73 ; 1              ;
+; key1cnt[19]~72 ; 1              ;
+; key1cnt[19]~71 ; 1              ;
+; key1cnt[18]~70 ; 1              ;
+; key1cnt[18]~69 ; 1              ;
+; key1cnt[17]~68 ; 1              ;
+; key1cnt[17]~67 ; 1              ;
+; key1cnt[16]~66 ; 1              ;
+; key1cnt[16]~65 ; 1              ;
+; key1cnt[15]~64 ; 1              ;
+; key1cnt[15]~63 ; 1              ;
+; key1cnt[14]~62 ; 1              ;
+; key1cnt[14]~61 ; 1              ;
+; key1cnt[13]~60 ; 1              ;
+; key1cnt[13]~59 ; 1              ;
+; key1cnt[12]~58 ; 1              ;
+; key1cnt[12]~57 ; 1              ;
+; key1cnt[11]~56 ; 1              ;
+; key1cnt[11]~55 ; 1              ;
+; key1cnt[10]~54 ; 1              ;
+; key1cnt[10]~53 ; 1              ;
+; key1cnt[9]~52  ; 1              ;
+; key1cnt[9]~51  ; 1              ;
+; key1cnt[8]~46  ; 1              ;
+; key1cnt[8]~45  ; 1              ;
+; key1cnt[7]~44  ; 1              ;
+; key1cnt[7]~43  ; 1              ;
+; key1cnt[6]~42  ; 1              ;
+; key1cnt[6]~41  ; 1              ;
+; key1cnt[5]~40  ; 1              ;
+; key1cnt[5]~39  ; 1              ;
+; key1cnt[4]~38  ; 1              ;
+; key1cnt[4]~37  ; 1              ;
+; key1cnt[3]~36  ; 1              ;
+; key1cnt[3]~35  ; 1              ;
+; key1cnt[2]~34  ; 1              ;
+; key1cnt[2]~33  ; 1              ;
+; key1cnt[1]~32  ; 1              ;
+; key1cnt[1]~31  ; 1              ;
+; key1cnt[0]~30  ; 1              ;
+; key1cnt[0]~29  ; 1              ;
+; Add0~50        ; 1              ;
+; Add0~49        ; 1              ;
+; Add0~48        ; 1              ;
+; Add0~47        ; 1              ;
+; Add0~46        ; 1              ;
+; Add0~45        ; 1              ;
+; Add0~44        ; 1              ;
+; Add0~43        ; 1              ;
+; Add0~42        ; 1              ;
+; Add0~41        ; 1              ;
+; Add0~40        ; 1              ;
+; Add0~39        ; 1              ;
+; Add0~38        ; 1              ;
+; Add0~37        ; 1              ;
+; Add0~36        ; 1              ;
+; Add0~35        ; 1              ;
+; Add0~34        ; 1              ;
+; Add0~33        ; 1              ;
+; Add0~32        ; 1              ;
+; Add0~31        ; 1              ;
+; Add0~30        ; 1              ;
+; Add0~29        ; 1              ;
+; Add0~28        ; 1              ;
+; Add0~27        ; 1              ;
+; Add0~26        ; 1              ;
+; Add0~25        ; 1              ;
+; Add0~24        ; 1              ;
+; Add0~23        ; 1              ;
+; Add0~22        ; 1              ;
+; Add0~21        ; 1              ;
+; Add0~20        ; 1              ;
+; Add0~19        ; 1              ;
+; Add0~18        ; 1              ;
+; Add0~17        ; 1              ;
+; Add0~16        ; 1              ;
+; Add0~15        ; 1              ;
+; Add0~14        ; 1              ;
+; Add0~13        ; 1              ;
+; Add0~12        ; 1              ;
+; Add0~11        ; 1              ;
+; Add0~10        ; 1              ;
+; Add0~9         ; 1              ;
+; Add0~8         ; 1              ;
+; Add0~7         ; 1              ;
+; Add0~6         ; 1              ;
+; Add0~5         ; 1              ;
+; Add0~4         ; 1              ;
+; Add0~3         ; 1              ;
+; Add0~2         ; 1              ;
+; Add0~1         ; 1              ;
+; Add0~0         ; 1              ;
++----------------+----------------+
+
+
++-----------------------------------------------------+
+; Other Routing Usage Summary                         ;
++-----------------------------+-----------------------+
+; Other Routing Resource Type ; Usage                 ;
++-----------------------------+-----------------------+
+; Block interconnects         ; 92 / 15,666 ( < 1 % ) ;
+; C16 interconnects           ; 0 / 812 ( 0 % )       ;
+; C4 interconnects            ; 37 / 11,424 ( < 1 % ) ;
+; Direct links                ; 37 / 15,666 ( < 1 % ) ;
+; Global clocks               ; 3 / 8 ( 38 % )        ;
+; Local interconnects         ; 86 / 4,608 ( 2 % )    ;
+; R24 interconnects           ; 1 / 652 ( < 1 % )     ;
+; R4 interconnects            ; 41 / 13,328 ( < 1 % ) ;
++-----------------------------+-----------------------+
+
+
++----------------------------------------------------------------------------+
+; LAB Logic Elements                                                         ;
++---------------------------------------------+------------------------------+
+; Number of Logic Elements  (Average = 10.18) ; Number of LABs  (Total = 11) ;
++---------------------------------------------+------------------------------+
+; 1                                           ; 1                            ;
+; 2                                           ; 1                            ;
+; 3                                           ; 0                            ;
+; 4                                           ; 0                            ;
+; 5                                           ; 0                            ;
+; 6                                           ; 1                            ;
+; 7                                           ; 0                            ;
+; 8                                           ; 2                            ;
+; 9                                           ; 0                            ;
+; 10                                          ; 0                            ;
+; 11                                          ; 1                            ;
+; 12                                          ; 1                            ;
+; 13                                          ; 0                            ;
+; 14                                          ; 0                            ;
+; 15                                          ; 0                            ;
+; 16                                          ; 4                            ;
++---------------------------------------------+------------------------------+
+
+
++-------------------------------------------------------------------+
+; LAB-wide Signals                                                  ;
++------------------------------------+------------------------------+
+; LAB-wide Signals  (Average = 1.27) ; Number of LABs  (Total = 11) ;
++------------------------------------+------------------------------+
+; 1 Async. clear                     ; 1                            ;
+; 1 Clock                            ; 8                            ;
+; 1 Clock enable                     ; 2                            ;
+; 1 Sync. clear                      ; 3                            ;
++------------------------------------+------------------------------+
+
+
++-----------------------------------------------------------------------------+
+; LAB Signals Sourced                                                         ;
++----------------------------------------------+------------------------------+
+; Number of Signals Sourced  (Average = 15.73) ; Number of LABs  (Total = 11) ;
++----------------------------------------------+------------------------------+
+; 0                                            ; 0                            ;
+; 1                                            ; 1                            ;
+; 2                                            ; 1                            ;
+; 3                                            ; 0                            ;
+; 4                                            ; 0                            ;
+; 5                                            ; 0                            ;
+; 6                                            ; 0                            ;
+; 7                                            ; 0                            ;
+; 8                                            ; 1                            ;
+; 9                                            ; 0                            ;
+; 10                                           ; 0                            ;
+; 11                                           ; 2                            ;
+; 12                                           ; 1                            ;
+; 13                                           ; 1                            ;
+; 14                                           ; 0                            ;
+; 15                                           ; 0                            ;
+; 16                                           ; 0                            ;
+; 17                                           ; 0                            ;
+; 18                                           ; 0                            ;
+; 19                                           ; 0                            ;
+; 20                                           ; 0                            ;
+; 21                                           ; 0                            ;
+; 22                                           ; 0                            ;
+; 23                                           ; 0                            ;
+; 24                                           ; 0                            ;
+; 25                                           ; 0                            ;
+; 26                                           ; 0                            ;
+; 27                                           ; 0                            ;
+; 28                                           ; 3                            ;
+; 29                                           ; 0                            ;
+; 30                                           ; 0                            ;
+; 31                                           ; 1                            ;
++----------------------------------------------+------------------------------+
+
+
++--------------------------------------------------------------------------------+
+; LAB Signals Sourced Out                                                        ;
++-------------------------------------------------+------------------------------+
+; Number of Signals Sourced Out  (Average = 6.91) ; Number of LABs  (Total = 11) ;
++-------------------------------------------------+------------------------------+
+; 0                                               ; 0                            ;
+; 1                                               ; 1                            ;
+; 2                                               ; 1                            ;
+; 3                                               ; 0                            ;
+; 4                                               ; 2                            ;
+; 5                                               ; 1                            ;
+; 6                                               ; 1                            ;
+; 7                                               ; 1                            ;
+; 8                                               ; 0                            ;
+; 9                                               ; 0                            ;
+; 10                                              ; 1                            ;
+; 11                                              ; 0                            ;
+; 12                                              ; 2                            ;
+; 13                                              ; 1                            ;
++-------------------------------------------------+------------------------------+
+
+
++----------------------------------------------------------------------------+
+; LAB Distinct Inputs                                                        ;
++---------------------------------------------+------------------------------+
+; Number of Distinct Inputs  (Average = 7.55) ; Number of LABs  (Total = 11) ;
++---------------------------------------------+------------------------------+
+; 0                                           ; 0                            ;
+; 1                                           ; 0                            ;
+; 2                                           ; 1                            ;
+; 3                                           ; 1                            ;
+; 4                                           ; 3                            ;
+; 5                                           ; 2                            ;
+; 6                                           ; 1                            ;
+; 7                                           ; 0                            ;
+; 8                                           ; 1                            ;
+; 9                                           ; 0                            ;
+; 10                                          ; 0                            ;
+; 11                                          ; 0                            ;
+; 12                                          ; 0                            ;
+; 13                                          ; 0                            ;
+; 14                                          ; 0                            ;
+; 15                                          ; 0                            ;
+; 16                                          ; 0                            ;
+; 17                                          ; 0                            ;
+; 18                                          ; 1                            ;
+; 19                                          ; 0                            ;
+; 20                                          ; 0                            ;
+; 21                                          ; 0                            ;
+; 22                                          ; 0                            ;
+; 23                                          ; 0                            ;
+; 24                                          ; 1                            ;
++---------------------------------------------+------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Fitter Device Options                                                   ;
++----------------------------------------------+--------------------------+
+; Option                                       ; Setting                  ;
++----------------------------------------------+--------------------------+
+; Enable user-supplied start-up clock (CLKUSR) ; Off                      ;
+; Enable device-wide reset (DEV_CLRn)          ; Off                      ;
+; Enable device-wide output enable (DEV_OE)    ; Off                      ;
+; Enable INIT_DONE output                      ; Off                      ;
+; Configuration scheme                         ; Active Serial            ;
+; Error detection CRC                          ; Off                      ;
+; nCEO                                         ; As output driving ground ;
+; ASDO,nCSO                                    ; As input tri-stated      ;
+; Reserve all unused pins                      ; As input tri-stated      ;
+; Base pin-out file on sameframe device        ; Off                      ;
++----------------------------------------------+--------------------------+
+
+
++------------------------------------+
+; Operating Settings and Conditions  ;
++---------------------------+--------+
+; Setting                   ; Value  ;
++---------------------------+--------+
+; Nominal Core Voltage      ; 1.20 V ;
+; Low Junction Temperature  ; 0 °C   ;
+; High Junction Temperature ; 85 °C  ;
++---------------------------+--------+
+
+
++-----------------+
+; Fitter Messages ;
++-----------------+
+Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
+Info (119006): Selected device EP2C5T144C8 for design "keyseg7scan"
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Info (171003): Fitter is performing an Auto Fit compilation, which may decrease Fitter effort to reduce compilation time
+Info (176444): Device migration not selected. If you intend to use device migration later, you may need to change the pin assignments as they may be incompatible with other devices
+    Info (176445): Device EP2C5T144I8 is compatible
+    Info (176445): Device EP2C8T144C8 is compatible
+    Info (176445): Device EP2C8T144I8 is compatible
+Info (169124): Fitter converted 3 user pins into dedicated programming pins
+    Info (169125): Pin ~ASDO~ is reserved at location 1
+    Info (169125): Pin ~nCSO~ is reserved at location 2
+    Info (169125): Pin ~LVDS41p/nCEO~ is reserved at location 76
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'keyseg7scan.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332144): No user constrained base clocks found in the design
+Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
+Info (176353): Automatically promoted node clk (placed in PIN 17 (CLK0, LVDSCLK0p, Input))
+    Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G2
+Info (176353): Automatically promoted node divclk 
+    Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
+Info (176353): Automatically promoted node rst (placed in PIN 90 (CLK5, LVDSCLK2n, Input))
+    Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G6
+    Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
+        Info (176357): Destination node num~0
+        Info (176357): Destination node num[3]~1
+        Info (176357): Destination node num~3
+        Info (176357): Destination node num~4
+        Info (176357): Destination node num~5
+Info (176233): Starting register packing
+Info (176235): Finished register packing
+    Extra Info (176219): No registers were packed into other blocks
+Warning (15705): Ignored locations or region assignments to the following nodes
+    Warning (15706): Node "key2" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "key4" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "key5" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "sd_addr[0]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "sd_addr[10]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "sd_addr[11]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "sd_addr[1]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "sd_addr[2]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "sd_addr[3]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "sd_addr[4]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "sd_addr[5]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "sd_addr[6]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "sd_addr[7]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "sd_addr[8]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "sd_addr[9]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "sd_ba[0]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "sd_ba[1]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "sd_cas" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "sd_cke" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "sd_clk" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "sd_cs" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "sd_data[0]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "sd_data[10]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "sd_data[11]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "sd_data[12]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "sd_data[13]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "sd_data[14]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "sd_data[15]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "sd_data[1]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "sd_data[2]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "sd_data[3]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "sd_data[4]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "sd_data[5]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "sd_data[6]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "sd_data[7]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "sd_data[8]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "sd_data[9]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "sd_ldqm" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "sd_ras" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "sd_udqm" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "sd_we" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "seg7com[0]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "seg7com[1]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "seg7com[2]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "seg7com[3]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "seg7data[0]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "seg7data[1]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "seg7data[2]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "seg7data[3]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "seg7data[4]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "seg7data[5]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "seg7data[6]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "seg7dp" is assigned to location or region, but does not exist in design
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
+Info (170189): Fitter placement preparation operations beginning
+Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
+Info (170191): Fitter placement operations beginning
+Info (170137): Fitter placement was successful
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:00
+Info (170193): Fitter routing operations beginning
+Info (170195): Router estimated average interconnect usage is 0% of the available device resources
+    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X14_Y0 to location X28_Y14
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
+Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
+    Info (170201): Optimizations that may affect the design's routability were skipped
+Info (11888): Total time spent on timing analysis during the Fitter is 0.33 seconds.
+Info (306004): Started post-fitting delay annotation
+Warning (306006): Found 13 output pins without output pin load capacitance assignment
+    Info (306007): Pin "led" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "seg[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "seg[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "seg[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "seg[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "seg[4]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "seg[5]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "seg[6]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "seg[7]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "dig[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "dig[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "dig[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "dig[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+Info (306005): Delay annotation completed successfully
+Info (306004): Started post-fitting delay annotation
+Info (306005): Delay annotation completed successfully
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
+Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
+Info (144001): Generated suppressed messages file C:/SCNU/Study/Test/Quartus/scan4seg7/keyseg7scan.fit.smsg
+Info: Quartus II 64-Bit Fitter was successful. 0 errors, 57 warnings
+    Info: Peak virtual memory: 5009 megabytes
+    Info: Processing ended: Fri May 24 19:41:25 2019
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:03
+
+
++----------------------------+
+; Fitter Suppressed Messages ;
++----------------------------+
+The suppressed messages can be found in C:/SCNU/Study/Test/Quartus/scan4seg7/keyseg7scan.fit.smsg.
+
+

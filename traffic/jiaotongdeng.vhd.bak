@@ -1,0 +1,66 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.STD_LOGIC_UNSIGNED.ALL;
+ 
+ENTITY jiaotongdeng IS
+PORT ( clk， subway: IN STD_LOGIC;     --subway按键代表次干道有无车等待，clk为1Hz
+       LIGHT1, LIGHT2, NUM1, NUM2: OUT INTEGER RANGE 0 TO 9 ); --数码管依次显示主干道灯，次干道灯，十位数，个位数
+END jiaotongdeng;
+
+ARCHITECTURE example OF jiaotongdeng IS 
+ TYPE STATES IS (S0,S1,S2,S3); --四种状态：
+ SIGNAL STATE: STATES;
+ SIGNAL SUBWAY_STATE: STD_LOGIC := '1'; --subway按键未按下，次干道没有车等待
+ SIGNAL COUNT : INTEGER RANGE 0 TO 45 := 0;
+ SIGNAL cnt : INTEGER RANGE 0 TO 45;
+ 
+BEGIN
+
+ PROCESS (SUBWAY) --次干道有车等待的状态
+  BEGIN 
+   SUBWAY_STATE <= subway; --由subway按键控制
+ END PROCESS; 
+ 
+ PROCESS (SUBWAY_STATE, COUNT)
+  BEGIN
+   IF(SUBWAY_STATE = '1') THEN
+	    STATE <= S0;
+		 cnt <= 45;
+	END IF;
+	   IF(SUBWAY_STATE = '0' AND cnt = 0) THEN
+	       STATE <= S1;
+		    cnt <= 5;
+		END IF;
+		   IF(STATE <= S1 AND cnt = 0) THEN
+		       STATE <= S2;
+			    cnt <= 25;
+			END IF;
+			  IF(STATE <= S2 AND cnt = 0 OR SUBWAY_STATE = '1') THEN
+			      STATE <= S3;
+					cnt <= 5;
+				END IF;
+				  IF(STATE <= S3 AND cnt = 0) THEN
+				      STATE <= S0;
+						cnt <= 45;
+					END IF;
+	CASE STATE IS
+	  WHEN S0 => LIGHT1 <= 1; LIGHT2 <= 4;
+	  WHEN S1 => LIGHT1 <= 2; LIGHT2 <= 4;
+	  WHEN S2 => LIGHT1 <= 4; LIGHT2 <= 1;
+	  WHEN S3 => LIGHT1 <= 4; LIGHT2 <= 2;
+	END CASE;
+	
+ PROCESS(clk)   
+  BEGIN   
+    IF(clk'EVENT AND clk='1')THEN
+       IF (COUNT = 0) THEN
+          COUNT <= cnt;
+       ELSE COUNT <= COUNT-1;
+       END IF;
+    END IF;
+ END PROCESS;
+ 
+ NUM1 <= COUNT/10;      --得十位
+ NUM2 <= COUNT REM 10;  --得个位
+ 
+END example;
