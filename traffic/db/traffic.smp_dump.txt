@@ -1,7 +1,0 @@
-
-State Machine - |traffic|jiaotongdeng:inst2|STATE
-Name STATE.S4 STATE.S3 STATE.S2 STATE.S1 
-STATE.S1 0 0 0 0 
-STATE.S2 0 0 1 1 
-STATE.S3 0 1 0 1 
-STATE.S4 1 0 0 1 
