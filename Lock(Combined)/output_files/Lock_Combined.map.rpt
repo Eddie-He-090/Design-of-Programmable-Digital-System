@@ -1,0 +1,796 @@
+Analysis & Synthesis report for Lock_Combined
+Mon May 27 21:08:22 2019
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. General Register Statistics
+ 10. Inverted Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Elapsed Time Per Partition
+ 13. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Mon May 27 21:08:22 2019           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; Lock_Combined                                   ;
+; Top-level Entity Name              ; Lock_Combined                                   ;
+; Family                             ; Cyclone II                                      ;
+; Total logic elements               ; 517                                             ;
+;     Total combinational functions  ; 517                                             ;
+;     Dedicated logic registers      ; 254                                             ;
+; Total registers                    ; 254                                             ;
+; Total pins                         ; 19                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++--------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                  ;
++--------------------------------------------------------------------------------+
+Option        : Device
+Setting       : EP2C5T144C8
+Default Value : 
+
+Option        : Top-level entity name
+Setting       : Lock_Combined
+Default Value : Lock_Combined
+
+Option        : Family name
+Setting       : Cyclone II
+Default Value : Cyclone IV GX
+
+Option        : Use smart compilation
+Setting       : Off
+Default Value : Off
+
+Option        : Enable parallel Assembler and TimeQuest Timing Analyzer during compilation
+Setting       : On
+Default Value : On
+
+Option        : Enable compact report table
+Setting       : Off
+Default Value : Off
+
+Option        : Restructure Multiplexers
+Setting       : Auto
+Default Value : Auto
+
+Option        : Create Debugging Nodes for IP Cores
+Setting       : Off
+Default Value : Off
+
+Option        : Preserve fewer node names
+Setting       : On
+Default Value : On
+
+Option        : Disable OpenCore Plus hardware evaluation
+Setting       : Off
+Default Value : Off
+
+Option        : Verilog Version
+Setting       : Verilog_2001
+Default Value : Verilog_2001
+
+Option        : VHDL Version
+Setting       : VHDL_1993
+Default Value : VHDL_1993
+
+Option        : State Machine Processing
+Setting       : Auto
+Default Value : Auto
+
+Option        : Safe State Machine
+Setting       : Off
+Default Value : Off
+
+Option        : Extract Verilog State Machines
+Setting       : On
+Default Value : On
+
+Option        : Extract VHDL State Machines
+Setting       : On
+Default Value : On
+
+Option        : Ignore Verilog initial constructs
+Setting       : Off
+Default Value : Off
+
+Option        : Iteration limit for constant Verilog loops
+Setting       : 5000
+Default Value : 5000
+
+Option        : Iteration limit for non-constant Verilog loops
+Setting       : 250
+Default Value : 250
+
+Option        : Add Pass-Through Logic to Inferred RAMs
+Setting       : On
+Default Value : On
+
+Option        : Infer RAMs from Raw Logic
+Setting       : On
+Default Value : On
+
+Option        : Parallel Synthesis
+Setting       : On
+Default Value : On
+
+Option        : DSP Block Balancing
+Setting       : Auto
+Default Value : Auto
+
+Option        : NOT Gate Push-Back
+Setting       : On
+Default Value : On
+
+Option        : Power-Up Don't Care
+Setting       : On
+Default Value : On
+
+Option        : Remove Redundant Logic Cells
+Setting       : Off
+Default Value : Off
+
+Option        : Remove Duplicate Registers
+Setting       : On
+Default Value : On
+
+Option        : Ignore CARRY Buffers
+Setting       : Off
+Default Value : Off
+
+Option        : Ignore CASCADE Buffers
+Setting       : Off
+Default Value : Off
+
+Option        : Ignore GLOBAL Buffers
+Setting       : Off
+Default Value : Off
+
+Option        : Ignore ROW GLOBAL Buffers
+Setting       : Off
+Default Value : Off
+
+Option        : Ignore LCELL Buffers
+Setting       : Off
+Default Value : Off
+
+Option        : Ignore SOFT Buffers
+Setting       : On
+Default Value : On
+
+Option        : Limit AHDL Integers to 32 Bits
+Setting       : Off
+Default Value : Off
+
+Option        : Optimization Technique
+Setting       : Balanced
+Default Value : Balanced
+
+Option        : Carry Chain Length
+Setting       : 70
+Default Value : 70
+
+Option        : Auto Carry Chains
+Setting       : On
+Default Value : On
+
+Option        : Auto Open-Drain Pins
+Setting       : On
+Default Value : On
+
+Option        : Perform WYSIWYG Primitive Resynthesis
+Setting       : Off
+Default Value : Off
+
+Option        : Auto ROM Replacement
+Setting       : On
+Default Value : On
+
+Option        : Auto RAM Replacement
+Setting       : On
+Default Value : On
+
+Option        : Auto Shift Register Replacement
+Setting       : Auto
+Default Value : Auto
+
+Option        : Allow Shift Register Merging across Hierarchies
+Setting       : Auto
+Default Value : Auto
+
+Option        : Auto Clock Enable Replacement
+Setting       : On
+Default Value : On
+
+Option        : Strict RAM Replacement
+Setting       : Off
+Default Value : Off
+
+Option        : Allow Synchronous Control Signals
+Setting       : On
+Default Value : On
+
+Option        : Force Use of Synchronous Clear Signals
+Setting       : Off
+Default Value : Off
+
+Option        : Auto RAM to Logic Cell Conversion
+Setting       : Off
+Default Value : Off
+
+Option        : Auto Resource Sharing
+Setting       : Off
+Default Value : Off
+
+Option        : Allow Any RAM Size For Recognition
+Setting       : Off
+Default Value : Off
+
+Option        : Allow Any ROM Size For Recognition
+Setting       : Off
+Default Value : Off
+
+Option        : Allow Any Shift Register Size For Recognition
+Setting       : Off
+Default Value : Off
+
+Option        : Use LogicLock Constraints during Resource Balancing
+Setting       : On
+Default Value : On
+
+Option        : Ignore translate_off and synthesis_off directives
+Setting       : Off
+Default Value : Off
+
+Option        : Timing-Driven Synthesis
+Setting       : Off
+Default Value : Off
+
+Option        : Report Parameter Settings
+Setting       : On
+Default Value : On
+
+Option        : Report Source Assignments
+Setting       : On
+Default Value : On
+
+Option        : Report Connectivity Checks
+Setting       : On
+Default Value : On
+
+Option        : Ignore Maximum Fan-Out Assignments
+Setting       : Off
+Default Value : Off
+
+Option        : Synchronization Register Chain Length
+Setting       : 2
+Default Value : 2
+
+Option        : PowerPlay Power Optimization
+Setting       : Normal compilation
+Default Value : Normal compilation
+
+Option        : HDL message level
+Setting       : Level2
+Default Value : Level2
+
+Option        : Suppress Register Optimization Related Messages
+Setting       : Off
+Default Value : Off
+
+Option        : Number of Removed Registers Reported in Synthesis Report
+Setting       : 5000
+Default Value : 5000
+
+Option        : Number of Swept Nodes Reported in Synthesis Report
+Setting       : 5000
+Default Value : 5000
+
+Option        : Number of Inverted Registers Reported in Synthesis Report
+Setting       : 100
+Default Value : 100
+
+Option        : Clock MUX Protection
+Setting       : On
+Default Value : On
+
+Option        : Auto Gated Clock Conversion
+Setting       : Off
+Default Value : Off
+
+Option        : Block Design Naming
+Setting       : Auto
+Default Value : Auto
+
+Option        : SDC constraint protection
+Setting       : Off
+Default Value : Off
+
+Option        : Synthesis Effort
+Setting       : Auto
+Default Value : Auto
+
+Option        : Shift Register Replacement - Allow Asynchronous Clear Signal
+Setting       : On
+Default Value : On
+
+Option        : Pre-Mapping Resynthesis Optimization
+Setting       : Off
+Default Value : Off
+
+Option        : Analysis & Synthesis Message Level
+Setting       : Medium
+Default Value : Medium
+
+Option        : Disable Register Merging Across Hierarchies
+Setting       : Auto
+Default Value : Auto
+
+Option        : Resource Aware Inference For Block RAM
+Setting       : On
+Default Value : On
+
+Option        : Synthesis Seed
+Setting       : 1
+Default Value : 1
++--------------------------------------------------------------------------------+
+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                         ;
++--------------------------------------------------------------------------------+
+File Name with User-Entered Path : Lock_Combined.vhd
+Used in Netlist                  : yes
+File Type                        : User VHDL File 
+File Name with Absolute Path     : C:/SCNU/Study/Test/Quartus/Lock(Combined)/Lock_Combined.vhd
+Library                          : 
++--------------------------------------------------------------------------------+
+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 517   ;
+;                                             ;       ;
+; Total combinational functions               ; 517   ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 210   ;
+;     -- 3 input functions                    ; 52    ;
+;     -- <=2 input functions                  ; 255   ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 307   ;
+;     -- arithmetic mode                      ; 210   ;
+;                                             ;       ;
+; Total registers                             ; 254   ;
+;     -- Dedicated logic registers            ; 254   ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 19    ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+; Maximum fan-out node                        ; clk   ;
+; Maximum fan-out                             ; 252   ;
+; Total fan-out                               ; 2426  ;
+; Average fan-out                             ; 3.07  ;
++---------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                            ;
++--------------------------------------------------------------------------------+
+Compilation Hierarchy Node : |Lock_Combined
+LC Combinationals          : 517 (517)
+LC Registers               : 254 (254)
+Memory Bits                : 0
+DSP Elements               : 0
+DSP 9x9                    : 0
+DSP 18x18                  : 0
+Pins                       : 19
+Virtual Pins               : 0
+Full Hierarchy Name        : |Lock_Combined
+Library Name               : work
++--------------------------------------------------------------------------------+
+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                            ;
++--------------------------------------------------------------------------------+
+Latch Name             : seg[0]$latch
+Latch Enable Signal    : Mux29
+Free of Timing Hazards : yes
+
+Latch Name             : seg[1]$latch
+Latch Enable Signal    : Mux29
+Free of Timing Hazards : yes
+
+Latch Name             : seg[2]$latch
+Latch Enable Signal    : Mux29
+Free of Timing Hazards : yes
+
+Latch Name             : seg[3]$latch
+Latch Enable Signal    : Mux29
+Free of Timing Hazards : yes
+
+Latch Name             : seg[4]$latch
+Latch Enable Signal    : Mux29
+Free of Timing Hazards : yes
+
+Latch Name             : seg[5]$latch
+Latch Enable Signal    : Mux29
+Free of Timing Hazards : yes
+
+Latch Name             : seg[6]$latch
+Latch Enable Signal    : Mux29
+Free of Timing Hazards : yes
+
+Latch Name             : dig[0]$latch
+Latch Enable Signal    : dig[3]
+Free of Timing Hazards : yes
+
+Latch Name             : dig[1]$latch
+Latch Enable Signal    : dig[3]
+Free of Timing Hazards : yes
+
+Latch Name             : dig[2]$latch
+Latch Enable Signal    : dig[3]
+Free of Timing Hazards : yes
+
+Latch Name             : dig[3]$latch
+Latch Enable Signal    : dig[3]
+Free of Timing Hazards : yes
+
+Latch Name             : data_r[0]
+Latch Enable Signal    : dig[3]
+Free of Timing Hazards : yes
+
+Latch Name             : data_r[1]
+Latch Enable Signal    : dig[3]
+Free of Timing Hazards : yes
+
+Latch Name             : data_r[2]
+Latch Enable Signal    : dig[3]
+Free of Timing Hazards : yes
+
+Latch Name             : data_r[3]
+Latch Enable Signal    : dig[3]
+Free of Timing Hazards : yes
+
+Latch Name             : Number of user-specified and inferred latches = 15 
+Latch Enable Signal    : 
+Free of Timing Hazards : 
++--------------------------------------------------------------------------------+
+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 254   ;
+; Number of registers using Synchronous Clear  ; 191   ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 2     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 217   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; keyword0[0]                            ; 1       ;
+; keyword1[0]                            ; 3       ;
+; Total number of inverted registers = 2 ;         ;
++----------------------------------------+---------+
+
+
++--------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                 ;
++--------------------------------------------------------------------------------+
+Multiplexer Inputs         : 3:1
+Bus Width                  : 29 bits
+Baseline Area              : 58 LEs
+Area if Restructured       : 29 LEs
+Saving if Restructured     : 29 LEs
+Registered                 : Yes
+Example Multiplexer Output : |Lock_Combined|s6cnt2[15]
+
+Multiplexer Inputs         : 3:1
+Bus Width                  : 26 bits
+Baseline Area              : 52 LEs
+Area if Restructured       : 26 LEs
+Saving if Restructured     : 26 LEs
+Registered                 : Yes
+Example Multiplexer Output : |Lock_Combined|s6cnt[3]
+
+Multiplexer Inputs         : 3:1
+Bus Width                  : 26 bits
+Baseline Area              : 52 LEs
+Area if Restructured       : 26 LEs
+Saving if Restructured     : 26 LEs
+Registered                 : Yes
+Example Multiplexer Output : |Lock_Combined|s4cnt[1]
+
+Multiplexer Inputs         : 3:1
+Bus Width                  : 29 bits
+Baseline Area              : 58 LEs
+Area if Restructured       : 29 LEs
+Saving if Restructured     : 29 LEs
+Registered                 : Yes
+Example Multiplexer Output : |Lock_Combined|s5cnt2[20]
+
+Multiplexer Inputs         : 3:1
+Bus Width                  : 26 bits
+Baseline Area              : 52 LEs
+Area if Restructured       : 26 LEs
+Saving if Restructured     : 26 LEs
+Registered                 : Yes
+Example Multiplexer Output : |Lock_Combined|s2cnt[0]
+
+Multiplexer Inputs         : 3:1
+Bus Width                  : 26 bits
+Baseline Area              : 52 LEs
+Area if Restructured       : 26 LEs
+Saving if Restructured     : 26 LEs
+Registered                 : Yes
+Example Multiplexer Output : |Lock_Combined|s3cnt[20]
+
+Multiplexer Inputs         : 3:1
+Bus Width                  : 26 bits
+Baseline Area              : 52 LEs
+Area if Restructured       : 26 LEs
+Saving if Restructured     : 26 LEs
+Registered                 : Yes
+Example Multiplexer Output : |Lock_Combined|s5cnt[15]
+
+Multiplexer Inputs         : 5:1
+Bus Width                  : 6 bits
+Baseline Area              : 18 LEs
+Area if Restructured       : 6 LEs
+Saving if Restructured     : 12 LEs
+Registered                 : Yes
+Example Multiplexer Output : |Lock_Combined|keyword0[3]
+
+Multiplexer Inputs         : 7:1
+Bus Width                  : 3 bits
+Baseline Area              : 12 LEs
+Area if Restructured       : 9 LEs
+Saving if Restructured     : 3 LEs
+Registered                 : Yes
+Example Multiplexer Output : |Lock_Combined|number0[1]
+
+Multiplexer Inputs         : 7:1
+Bus Width                  : 3 bits
+Baseline Area              : 12 LEs
+Area if Restructured       : 9 LEs
+Saving if Restructured     : 3 LEs
+Registered                 : Yes
+Example Multiplexer Output : |Lock_Combined|number1[3]
+
+Multiplexer Inputs         : 7:1
+Bus Width                  : 3 bits
+Baseline Area              : 12 LEs
+Area if Restructured       : 9 LEs
+Saving if Restructured     : 3 LEs
+Registered                 : Yes
+Example Multiplexer Output : |Lock_Combined|number2[3]
+
+Multiplexer Inputs         : 7:1
+Bus Width                  : 3 bits
+Baseline Area              : 12 LEs
+Area if Restructured       : 9 LEs
+Saving if Restructured     : 3 LEs
+Registered                 : Yes
+Example Multiplexer Output : |Lock_Combined|number3[3]
+
+Multiplexer Inputs         : 36:1
+Bus Width                  : 2 bits
+Baseline Area              : 48 LEs
+Area if Restructured       : 6 LEs
+Saving if Restructured     : 42 LEs
+Registered                 : Yes
+Example Multiplexer Output : |Lock_Combined|number[2]
+
+Multiplexer Inputs         : 5:1
+Bus Width                  : 2 bits
+Baseline Area              : 6 LEs
+Area if Restructured       : 2 LEs
+Saving if Restructured     : 4 LEs
+Registered                 : Yes
+Example Multiplexer Output : |Lock_Combined|keyword0[0]
+
+Multiplexer Inputs         : 33:1
+Bus Width                  : 2 bits
+Baseline Area              : 44 LEs
+Area if Restructured       : 6 LEs
+Saving if Restructured     : 38 LEs
+Registered                 : No
+Example Multiplexer Output : |Lock_Combined|number
+
+Multiplexer Inputs         : 12:1
+Bus Width                  : 4 bits
+Baseline Area              : 32 LEs
+Area if Restructured       : 24 LEs
+Saving if Restructured     : 8 LEs
+Registered                 : No
+Example Multiplexer Output : |Lock_Combined|data_r[0]
++--------------------------------------------------------------------------------+
+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Mon May 27 21:08:19 2019
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lock_Combined -c Lock_Combined
+Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
+Info (12021): Found 2 design units, including 1 entities, in source file lock_combined.vhd
+    Info (12022): Found design unit 1: Lock_Combined-behav
+    Info (12023): Found entity 1: Lock_Combined
+Info (12127): Elaborating entity "Lock_Combined" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at Lock_Combined.vhd(45): object "keyword2" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at Lock_Combined.vhd(46): object "keyword3" assigned a value but never read
+Warning (10492): VHDL Process Statement warning at Lock_Combined.vhd(72): signal "s5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Lock_Combined.vhd(81): signal "number" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Lock_Combined.vhd(94): signal "number" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Lock_Combined.vhd(97): signal "number0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Lock_Combined.vhd(107): signal "number" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Lock_Combined.vhd(110): signal "number1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Lock_Combined.vhd(112): signal "number0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Lock_Combined.vhd(120): signal "number" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Lock_Combined.vhd(123): signal "number2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Lock_Combined.vhd(125): signal "number1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Lock_Combined.vhd(127): signal "number0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Lock_Combined.vhd(133): signal "number" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Lock_Combined.vhd(136): signal "number3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Lock_Combined.vhd(138): signal "number2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Lock_Combined.vhd(140): signal "number1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Lock_Combined.vhd(142): signal "number0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Lock_Combined.vhd(146): signal "number" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Lock_Combined.vhd(159): signal "number" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at Lock_Combined.vhd(79): inferring latch(es) for signal or variable "dig", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at Lock_Combined.vhd(79): inferring latch(es) for signal or variable "data_r", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at Lock_Combined.vhd(173): inferring latch(es) for signal or variable "seg", which holds its previous value in one or more paths through the process
+Warning (10492): VHDL Process Statement warning at Lock_Combined.vhd(371): signal "clk" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Lock_Combined.vhd(390): signal "clk" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Lock_Combined.vhd(409): signal "clk" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Lock_Combined.vhd(428): signal "clk" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Lock_Combined.vhd(447): signal "clk" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Lock_Combined.vhd(466): signal "clk" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Lock_Combined.vhd(485): signal "clk" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (10041): Inferred latch for "seg[0]" at Lock_Combined.vhd(173)
+Info (10041): Inferred latch for "seg[1]" at Lock_Combined.vhd(173)
+Info (10041): Inferred latch for "seg[2]" at Lock_Combined.vhd(173)
+Info (10041): Inferred latch for "seg[3]" at Lock_Combined.vhd(173)
+Info (10041): Inferred latch for "seg[4]" at Lock_Combined.vhd(173)
+Info (10041): Inferred latch for "seg[5]" at Lock_Combined.vhd(173)
+Info (10041): Inferred latch for "seg[6]" at Lock_Combined.vhd(173)
+Info (10041): Inferred latch for "seg[7]" at Lock_Combined.vhd(173)
+Info (10041): Inferred latch for "data_r[0]" at Lock_Combined.vhd(79)
+Info (10041): Inferred latch for "data_r[1]" at Lock_Combined.vhd(79)
+Info (10041): Inferred latch for "data_r[2]" at Lock_Combined.vhd(79)
+Info (10041): Inferred latch for "data_r[3]" at Lock_Combined.vhd(79)
+Info (10041): Inferred latch for "data_r[4]" at Lock_Combined.vhd(79)
+Info (10041): Inferred latch for "dig[0]" at Lock_Combined.vhd(79)
+Info (10041): Inferred latch for "dig[1]" at Lock_Combined.vhd(79)
+Info (10041): Inferred latch for "dig[2]" at Lock_Combined.vhd(79)
+Info (10041): Inferred latch for "dig[3]" at Lock_Combined.vhd(79)
+Warning (13012): Latch seg[0]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal data_r[0]
+Warning (13012): Latch seg[1]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal data_r[0]
+Warning (13012): Latch seg[2]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal data_r[0]
+Warning (13012): Latch seg[3]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal data_r[0]
+Warning (13012): Latch seg[4]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal data_r[0]
+Warning (13012): Latch seg[5]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal data_r[0]
+Warning (13012): Latch seg[6]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal data_r[0]
+Warning (13012): Latch data_r[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal number[2]
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal number[2]
+Warning (13012): Latch data_r[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal number[2]
+    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal number[2]
+Warning (13012): Latch data_r[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal number[2]
+    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal number[2]
+Warning (13012): Latch data_r[3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal number[2]
+    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal number[2]
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "seg[7]" is stuck at VCC
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 537 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 6 input pins
+    Info (21059): Implemented 13 output pins
+    Info (21061): Implemented 518 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 58 warnings
+    Info: Peak virtual memory: 4655 megabytes
+    Info: Processing ended: Mon May 27 21:08:22 2019
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:03
+
+
