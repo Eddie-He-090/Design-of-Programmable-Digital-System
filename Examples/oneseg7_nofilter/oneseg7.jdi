@@ -1,0 +1,8 @@
+<sld_project_info>
+  <file_info>
+    <file checksum="0x000729DE" device="EP2C5T144C8" path="oneseg7.sof" usercode="0x000729DE"/>
+    <file checksum="0x0752B0F5" device="EPCS4" path="oneseg7.pof" usercode="0x00000000"/>
+  </file_info>
+  <hub_info ir_width="0" node_count="0"/>
+  <node_info/>
+</sld_project_info>
