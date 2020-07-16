@@ -1,0 +1,178 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+use ieee.std_logic_arith.all; 
+
+entity secondcnt is
+ PORT(  clk  :  IN  STD_LOGIC;
+		 rst  : IN STD_LOGIC;
+		 seg: out std_logic_vector(7 downto 0);  --数码管的段数据，包括小数点共8段LED，低电平点亮
+		 dig: out std_logic_vector(3 downto 0)		--数码管的选通信号,共4个数码管，低电平选通
+       ); 	
+END secondcnt;
+ARCHITECTURE behav OF secondcnt IS
+
+  --秒表用到的信号
+  SIGNAL secondclk   :  STD_LOGIC;
+  signal num0 	:  integer range 0 to 9;
+  signal num1 	:  integer range 0 to 9;
+  signal num2 	:  integer range 0 to 9;
+  signal num3 	:  integer range 0 to 9;
+  signal upnum0,upnum1,upnum2,upnum3 : std_logic;
+  
+	--数码管扫描用到的信号
+  SIGNAL scan  :  STD_LOGIC_VECTOR(1 DOWNTO 0); --扫描计数器
+  SIGNAL divclk   :  STD_LOGIC;    --由基准时钟分频得到的扫描时钟
+  signal data_r 	: integer range 0 to 9;  
+  
+begin
+
+--*********************************************
+--秒表计数功能部分
+--1、首先对基准时钟clk分频出1秒的脉冲信号
+--********************************************
+process(clk)
+	variable count:integer range 0 to 50000000;
+begin
+	if clk'event and clk = '1' then
+		 if rst = '0' then
+			count := 0;
+		 else
+			if count = 50000000 - 1 then   -- 基准时钟clk为50Mhz,分频得1秒脉冲                       
+				count := 0;
+				secondclk <= '1';
+			else
+				count := count + 1;
+				secondclk <= '0';
+			end if;
+		 end if;
+	end if;
+end process;
+
+--秒、分计数模块
+process (clk)
+begin
+	if clk'event and clk = '1' then
+		if rst = '0' then	
+			num0 <= 0;
+			num1 <= 0;
+			num2 <= 0;
+			num3 <= 0;
+		else
+			if (secondclk = '1')  then --对秒脉冲十进制计数
+				if num0 = 9 then 
+					num0 <= 0;
+					upnum1 <= '1';  --进秒的十位
+				else	
+					num0 <= num0 + 1;
+				end if;
+			end if;
+			
+			if upnum1 = '1' then  --秒十位计数，注：这是六进制计数
+				upnum1 <= '0';
+				if num1 = 5 then 
+					num1 <= 0;
+					upnum2 <= '1';	 --进分钟个位
+				else	
+					num1 <= num1 + 1;
+				end if;
+			end if;
+			
+			if upnum2 = '1' then	 --分钟个位计数，注：十进制计数
+				upnum2 <= '0'; 
+				if num2 = 9 then 
+					num2 <= 0;
+					upnum3 <= '1'; 	--进分钟的十位
+				else	
+					num2 <= num2 + 1;
+				end if;
+			end if;
+			
+			if upnum3 = '1' then  --分钟的十位计数，注：这是六进制计数
+				upnum3 <= '0';
+				if num3 = 5 then 
+					num3 <= 0;
+				else	
+					num3 <= num3 + 1;
+				end if;
+			end if;
+			
+		end if;
+	end if;
+end process;
+
+
+--******************************************
+--数码管译码显示部分
+--******************************************
+
+	--分频得到扫描时钟
+	a:process(clk,rst)
+	  constant clkfrq :integer := 50000000; --设基准时钟频率clkfrq为50Mhz
+	  constant scanfrq :integer := 50; --设扫描频率scanfrq为50Hz，
+	  variable count:integer range 0 to 50000000;
+	  begin
+		 if rst = '0' then
+			count := 0;
+		 elsif clk'event and clk = '1' then
+			if count = clkfrq/(scanfrq*4)-1 then   -- 设扫描频率scanfrq为50Hz，基准时钟clk为50Mhz                        
+				count := 0;
+				divclk <= '1';
+			else
+				count := count + 1;
+				divclk <= '0';
+			end if;
+		end if;
+	  end process;
+	  
+	b:process(divclk,rst)
+	  begin
+		if rst = '0' then
+			scan <= "00";
+		elsif divclk'event and divclk = '1' then
+			scan <= scan + '1';
+		end if;
+	  end process;
+	  
+	 c:process(scan)
+	   begin
+		 case scan is 
+			when "00" => dig <= "1110";  data_r <= num0; 
+			when "01" => dig <= "1101";  data_r <= num1; 
+			when "10" => dig <= "1011";  data_r <= num2; 
+			when "11" => dig <= "0111";  data_r <= num3; 
+		end case;
+	   end process;
+	 
+	 d:process(data_r)
+	   begin
+		 case data_r is
+				when 0 => seg <= "11000000"; -- 0
+				when 1 => seg <= "11111001"; -- 1
+				when 2 => seg <= "10100100"; -- 2
+				when 3 => seg <= "10110000"; -- 3
+				when 4 => seg <= "10011001"; -- 4
+				when 5 => seg <= "10010010"; -- 5
+				when 6 => seg <= "10000010"; -- 6
+				when 7 => seg <= "11111000"; -- 7
+				when 8 => seg <= "10000000"; -- 8
+				when 9 => seg <= "10010000"; -- 9
+				when others =>NULL;
+		  end case;
+		end process;
+------------------------------------------------------------------------------------
+-- 译码示意图
+--                        a(0)
+--                      +------+ 
+--                 f(5) |      | b(1)
+--								| g(6) |
+--                      +------+  
+--                 e(4) |      | c(2)
+--								|		 |
+--                      +------+  .h(7)
+--                        d(3)
+--
+--                  低电平点亮
+------------------------------------------------------------------------------------	
+
+end behav;

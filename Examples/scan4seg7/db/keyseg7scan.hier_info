@@ -1,0 +1,45 @@
+|keyseg7scan
+clk => divclk.CLK
+clk => \a:count[0].CLK
+clk => \a:count[1].CLK
+clk => \a:count[2].CLK
+clk => \a:count[3].CLK
+clk => \a:count[4].CLK
+clk => \a:count[5].CLK
+clk => \a:count[6].CLK
+clk => \a:count[7].CLK
+clk => \a:count[8].CLK
+clk => \a:count[9].CLK
+clk => \a:count[10].CLK
+clk => \a:count[11].CLK
+clk => \a:count[12].CLK
+clk => \a:count[13].CLK
+clk => \a:count[14].CLK
+clk => \a:count[15].CLK
+clk => \a:count[16].CLK
+clk => \a:count[17].CLK
+clk => \a:count[18].CLK
+clk => \a:count[19].CLK
+clk => \a:count[20].CLK
+clk => \a:count[21].CLK
+clk => \a:count[22].CLK
+clk => \a:count[23].CLK
+clk => \a:count[24].CLK
+clk => \a:count[25].CLK
+rst => scan[0].ACLR
+rst => scan[1].ACLR
+key1 => ~NO_FANOUT~
+seg[0] <= Mux12.DB_MAX_OUTPUT_PORT_TYPE
+seg[1] <= Mux11.DB_MAX_OUTPUT_PORT_TYPE
+seg[2] <= Mux10.DB_MAX_OUTPUT_PORT_TYPE
+seg[3] <= Mux9.DB_MAX_OUTPUT_PORT_TYPE
+seg[4] <= Mux8.DB_MAX_OUTPUT_PORT_TYPE
+seg[5] <= Mux7.DB_MAX_OUTPUT_PORT_TYPE
+seg[6] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+seg[7] <= <VCC>
+dig[0] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+dig[1] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+dig[2] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+dig[3] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
